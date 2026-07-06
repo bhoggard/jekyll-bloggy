@@ -7,10 +7,10 @@ permalink: /2006/01/miami-highlight-1.html
 
 <p>No, really, I did mean to do another post when I wrote &#8220;to be continued&#8221; at the end of the <a href="/2005/12/miami-art-highl.html">last one</a>.</p>
 <p>In no particular order, all from the <span class="caps">NADA</span> fair:</p>
-<p>Kim HiorthÃ¸y drawings and collages at Standard (Oslo).  He also does street art and album covers.  An example from their <a href="http://www.standardart.no/v1/k.hiorthoy.swo.php">web site</a>:</p>
+<p>Kim Hiorthøy drawings and collages at Standard (Oslo).  He also does street art and album covers.  An example from their <a href="http://www.standardart.no/v1/k.hiorthoy.swo.php">web site</a>:</p>
 <p><img alt="SOKH-2004-Momentum-02.jpg" src="/mt/archives/SOKH-2004-Momentum-02.jpg" width="500" height="333" /></p>
-<p>Kim HiorthÃ¸y<br />
-<em>Alt du trodde kom til Ã¥ skje kommer aldri til Ã¥ skje</em>, 2004<br />
+<p>Kim Hiorthøy<br />
+<em>Alt du trodde kom til å skje kommer aldri til å skje</em>, 2004<br />
 Acrylic paint on wall<br />
 500 &#215; 2000 cm<br />
 Installation view, &#8220;<span class="caps">MOMENTUM</span> &#8211; The Nordic Art Festival&#8221;, Moss, 2004</p>

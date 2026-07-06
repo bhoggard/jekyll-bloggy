@@ -9,4 +9,4 @@ permalink: /2004/01/no-more-whitney.html
 <blockquote>While Mr Weinberg has not decided how to organise the 2006 biennial, he is giving serious thought to Â“an installation of the entire museum top-to-bottom with the collectionÂ”.</blockquote>
 <p>Later on in the article, after talking about the museum&#8217;s lack of space, we also read this:</p>
 <blockquote>Mr Anderson had investigated the possibility of mounting the Biennial and other exhibitions in the Seventh Regiment Armory on Park Avenue, but Mr Weinberg has not formally explored that possibility as yet. Meanwhile, he intends to reclaim for exhibitions part of the indoor/outdoor gallery on the lower floor of the building which currently houses the restaurant and shop.</blockquote>
-<p>I just noticed the use of &#8220;Mr&#8221; (no period) rather than &#8220;Mr.&#8221;  Is that a new trend?  Are periods passÃ©?</p>
+<p>I just noticed the use of &#8220;Mr&#8221; (no period) rather than &#8220;Mr.&#8221;  Is that a new trend?  Are periods passé?</p>

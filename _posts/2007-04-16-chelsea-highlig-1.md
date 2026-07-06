@@ -10,7 +10,7 @@ permalink: /2007/04/chelsea-highlig-1.html
 <p>Christopher Lowry Johnson at <a href="http://www.artcal.net/event/view/1/4301">Winkleman Gallery</a>.  Hard to show via JPEGs, these are beautiful subtle paintings.  We&#8217;ve been fans for a long time, having bought a painting by Christopher from the very first show at Plus Ultra.  This is the final week, so run over there!</p>
 <p>&nbsp;</p>
 <p><img src="http://www.artcal.net/static/artcal-images/3/3086.jpeg" alt="Donna Huanca" /></p>
-<p>Donna Huanca, <em>Che Guevara&#8217;s Family</em>, 2006, fabric, 82 Ã— 57.5 inches</p>
+<p>Donna Huanca, <em>Che Guevara&#8217;s Family</em>, 2006, fabric, 82 × 57.5 inches</p>
 <p>Donna Huanca at <a href="http://www.artcal.net/event/view/1/4506">Susan Inglett Gallery</a>.  We first saw her work at the <a href="http://jameswagner.com/mt_archives/005745.html">&#8220;Manic and Wasted&#8221;</a> show curated by at LMCC&#8217;s Swing Space.  I will probably add some photos to my <a href="https://www.flickr.com/photos/bloggy/">Flickr </a>feed once I have my MacBook back, as there are some great sculptures/installations too.  The show also includes a sound installation.</p>
 <p>&nbsp;</p>
 <p><img src="http://www.artcal.net/static/artcal-images/2/2884.jpeg" alt="Julie Evans" /></p>

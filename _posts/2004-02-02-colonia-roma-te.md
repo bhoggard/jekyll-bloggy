@@ -6,7 +6,7 @@ permalink: /2004/02/colonia-roma-te.html
 ---
 
 <p>I saw a hummingbird on our room <a href="http://jameswagner.com/gallery/mexico-city-2004-caminoreal/PICT0029">balcony</a> this morning.  My cough is better, but now James has it.</p>
-<p>We walked over to Colonia Roma today, the area where most galleries are located.  The only thing of note we saw was a show of wooden sculptures and &#8220;paintings&#8221; by a German artist named Stephan Balkenhol at <a href="http://www.galeriaomr.com/">GalerÃ­a <span class="caps">OMR</span></a> (the web page is iffy on some browsers).  The gallery is in a big rambling house on the Plaza de RÃ­o de Janeiro.  Some of the floors are pretty slanted, so I&#8217;m starting to associated seeing contemporary art with fun houses.  Perhaps that&#8217;s appropriate.</p>
+<p>We walked over to Colonia Roma today, the area where most galleries are located.  The only thing of note we saw was a show of wooden sculptures and &#8220;paintings&#8221; by a German artist named Stephan Balkenhol at <a href="http://www.galeriaomr.com/">Galería <span class="caps">OMR</span></a> (the web page is iffy on some browsers).  The gallery is in a big rambling house on the Plaza de Río de Janeiro.  Some of the floors are pretty slanted, so I&#8217;m starting to associated seeing contemporary art with fun houses.  Perhaps that&#8217;s appropriate.</p>
 <div align="center"><img alt="stephane-balkenhol.gif" src="/mt/archives/stephane-balkenhol.gif" width="270" height="380" border="0" /><br />
 <br />
 Stephan Balkenhol <br />
@@ -14,8 +14,8 @@ Relieve (mujer), 2004 <br />
 Painted wood, 140 &#215; 100 &#215; 4.5 cm.</div>
 <p>We then had a great nouvelle Mexican lunch at Tecla (Durango 186-A Col. Roma, Tel. 55-25-4920).  For the foodies in the room, I took notes on our meal:</p>
 <p><b>Appetizers</b></p>
-<p>Jaibas rellenos sobre pimientos salteados con jengibre y jalapeÃ±o<br />
-(stuffed crabs on a pepper sauce with ginger and jalapeÃ±o)</p>
+<p>Jaibas rellenos sobre pimientos salteados con jengibre y jalapeño<br />
+(stuffed crabs on a pepper sauce with ginger and jalapeño)</p>
 <p>Tlacoyo con puntas de cecina y nopal<br />
 (white tortilla with bits of cured meat and cactus)</p>
 <p><b>Main courses</b><br />

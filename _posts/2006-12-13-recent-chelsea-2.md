@@ -7,7 +7,7 @@ permalink: /2006/12/recent-chelsea-2.html
 
 <p>James already wrote about <a href="http://jameswagner.com/mt_archives/005958.html">one</a> of these, but here are my favorite things I&#8217;ve seen lately in Chelsea.</p>
 <p><img src="/upload/2006/12/David_S_Allee_Garage_Drivingbrifrom_Cross_Lands_seriesi_794_530.jpg" width="500" alt="David_S_Allee_Garage_Drivingbrifrom_Cross_Lands_seriesi_794_530.jpg"/></p>
-<p>David S. Allee, <em>Garage Driving</em>, 2006, Chromogenic Print, 50 Ã— 60 inches</p>
+<p>David S. Allee, <em>Garage Driving</em>, 2006, Chromogenic Print, 50 × 60 inches</p>
 <p><a href="http://www.artcal.net/event/view/1/3209">David S. Allee, <em>Cross Lands</em></a> at Morgan Lehman (already closed)</p>
 <p>Disturbing but gorgeous large-format prints of American civilization&#8217;s battle for space of cars and humans.</p>
 <p>__</p>

@@ -16,7 +16,7 @@ Opening: Friday, September 8, 7:00PM &#8211; 9:00PM</p>
 <p>On Thursday night in Chelsea, we may not make it to all, but I definitely want to try to hit:</p>
 <ul>
 	<li>Jesse Bercowetz &amp; Matt Bua at <a href="http://www.artcal.net/event/view/1/2918">Derek Eller</a></li>
-	<li>Ester PartegÃ s at <a href="http://www.artcal.net/event/view/1/3058">Foxy Production</a></li>
+	<li>Ester Partegàs at <a href="http://www.artcal.net/event/view/1/3058">Foxy Production</a></li>
 	<li>Jen Dalton at <a href="http://www.artcal.net/event/view/1/2938">Winkleman / Plus Ultra</a></li>
 </ul>
 <p>It looks like you should just hit 27th Street if you can&#8217;t make it to everything.</p>

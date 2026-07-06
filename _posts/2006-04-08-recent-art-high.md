@@ -16,7 +16,7 @@ permalink: /2006/04/recent-art-high.html
 <p>Lars Fisk at <a href="http://www.artcal.net/event/view/1/2036">Taxter &amp; Spengemann</a></p>
 
 <p><a href="https://www.flickr.com/photos/bloggy/125326729/" title="Photo Sharing"><img src="https://static.flickr.com/45/125326729_0fc6f88025.jpg" width="500" height="375" alt="Jennifer Toth at Holland Tunnel" /></a></p>
-<p>Jennifer Toth at Holland Tunnel, <a href="http://www.artcal.net/event/view/2/2069">MÃ©nage Ã  Trois</a> (through April 16)</p>
+<p>Jennifer Toth at Holland Tunnel, <a href="http://www.artcal.net/event/view/2/2069">Ménage à Trois</a> (through April 16)</p>
 
 <p><a href="https://www.flickr.com/photos/bloggy/122664280/" title="Photo Sharing"><img src="https://static.flickr.com/38/122664280_c12a6db72d.jpg" width="500" height="375" alt="Larry Bamburg at Esso" /></a></p>
 <p>Larry Bamburg at <a href="http://www.artcal.net/event/view/1/1978">Esso</a> (through April 15) &#8212; He also has amazing kinetic sculptures which I was unable to photograph.</p>

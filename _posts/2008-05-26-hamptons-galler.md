@@ -22,4 +22,4 @@ East Hampton Village police declined to comment Sunday except to confirm in a wr
 Vered said the Champagne and wine &#8212; donated by the Bridgehampton winery <a href="http://www.channingdaughters.com/">Channing Daughters</a> &#8212; was free, as always. Vered said she&#8217;s offered alcoholic beverages at her gallery for more than 30 years and has never been questioned by police.<br />
 <br />
 She said she spent about two hours at the police station. &#8220;It&#8217;s absolutely ridiculous,&#8221; she said. &#8220;They&#8217;re sabotaging the life of our small business. Everybody does parties and gives Champagne. It&#8217;s East Hampton!&#8221;</blockquote>
-<p>By the way, the winery that donated the wine and Champagne, <a href="http://www.channingdaughters.com/">Channing Daughters</a> is one of my favorite long island vintners, along with <a href="http://www.wolffer.com/">WÃ¶lffer Estate</a>.</p>
+<p>By the way, the winery that donated the wine and Champagne, <a href="http://www.channingdaughters.com/">Channing Daughters</a> is one of my favorite long island vintners, along with <a href="http://www.wolffer.com/">Wölffer Estate</a>.</p>

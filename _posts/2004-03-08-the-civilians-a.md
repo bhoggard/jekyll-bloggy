@@ -11,7 +11,7 @@ permalink: /2004/03/the-civilians-a.html
 <blockquote><span class="caps">GRAND</span>  <span class="caps">HARMONIOUS</span> <span class="caps">VAUDEVILLE</span><br />
 Friday, April  16th, 8pm<br />
 Ticket price includes a buffet of Chinese appetizers.<br />
-Complimentary vodka and tequila cocktails courtesy  of Grey Goose and CorazÃ³n.<br />
+Complimentary vodka and tequila cocktails courtesy  of Grey Goose and Corazón.<br />
 Cash bar for other drinks.<br />
 <br />
 Grand  Harmony Restaurant<br />

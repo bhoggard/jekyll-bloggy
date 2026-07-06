@@ -1,5 +1,5 @@
 ---
-title: "Great article on Pedro AlmodÃ³var"
+title: "Great article on Pedro Almodóvar"
 date: 2004-09-06 14:58:12 -04:00
 categories: [Culture]
 permalink: /2004/09/great-article-o.html

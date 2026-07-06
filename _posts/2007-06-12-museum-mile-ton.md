@@ -9,7 +9,7 @@ permalink: /2007/06/museum-mile-ton.html
 <p>Daniel Isengart at the 28th Museum Mile Festival, 2006</p>
 <p>&nbsp;</p>
 <p>Tonight is Museum Mile, when 23 blocks of Fifth Avenue along Central Park are closed to cars and museums are open late with free admission.  The <a href="http://www.museummilefestival.org/">website</a> has more information.</p>
-<p>Our friend <a href="http://www.danielisengart.com/">Daniel Isengart</a> (alias <a href="/2007/03/homeless-museum-1.html">Madame Butterfly</a>) will be singing German Cabaret songs (with David Pearl on keyboard) on the steps of the <a href="http://www.neuegalerie.org/">Neue Galerie</a>.  In case of rain, go find him inside the Neue, at CafÃ© Sabarsky.</p>
+<p>Our friend <a href="http://www.danielisengart.com/">Daniel Isengart</a> (alias <a href="/2007/03/homeless-museum-1.html">Madame Butterfly</a>) will be singing German Cabaret songs (with David Pearl on keyboard) on the steps of the <a href="http://www.neuegalerie.org/">Neue Galerie</a>.  In case of rain, go find him inside the Neue, at Café Sabarsky.</p>
 <p>Neue Galerie<br />
 86th and Fifth<br />
 6-9PM (three sets)<br />

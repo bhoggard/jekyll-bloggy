@@ -27,7 +27,7 @@ El Flamingo<br />
 With COVERversions of Michael Friedman&#8217;s songs performed by members of The Civilians with special guests &gt;&gt;&gt; Tony winner <span class="caps">KAREN</span> <span class="caps">ZIEMBA</span> (Contact, Chicago), neo-roots music group <span class="caps">OLLABELLE</span>, cabaret chanteuse <span class="caps">MAUDE</span> <span class="caps">MAGGART</span>, Broadway star <span class="caps">JEFFREY</span> <span class="caps">CARLSON</span> (Taboo, The Goat), the vivacious and acrobatic <span class="caps">WAU</span>-<span class="caps">WAU</span> <span class="caps">SISTERS</span>, the incomparable <span class="caps">DALE</span> <span class="caps">SOULES</span>, Her Royal Rhymeness <span class="caps">PRINCESS</span> <span class="caps">SUPERSTAR</span>, and our underCOVER MC, funnylady <span class="caps">BAYNE</span> <span class="caps">GIBBY</span>.<br />
 <br />
 Ticket price includes performance, silent auction, afterparty, and<br />
-complimentary CorazÃ³n Tequila cocktails and TsingTao beer. Cash bar for other drinks.<br />
+complimentary Corazón Tequila cocktails and TsingTao beer. Cash bar for other drinks.<br />
 <br />
 underCOVER <span class="caps">AFTERPARTY</span><br />
 10pm to Midnight<br />

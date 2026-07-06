@@ -6,7 +6,7 @@ permalink: /2007/05/this-offends-me.html
 ---
 
 <p>While I appreciate the fact that a lot of money is flowing into the art world right now, and a lot more artists (even ones I know) are making a living from their art, the idea that ones hires an art advisor to &#8220;save time&#8221; figuring out what one likes is revolting.  Some selective quotes from today&#8217;s <a href="http://www.nytimes.com/2007/05/27/business/yourmoney/27art.html?_r=1&ref=business&oref=slogin"><em>New York Times</em></a>:</p>
-<blockquote>As for the collectors themselves, there appear to be as many types as there are art styles. Most buy the art because they love it, and some buy it for investment reasons. As for others, Â“no doubt Â— it makes a banker look more colorful and erudite when he can discuss his art at a dinner party,Â” Ms. WÃ¤chter-Campbell said.<br />
+<blockquote>As for the collectors themselves, there appear to be as many types as there are art styles. Most buy the art because they love it, and some buy it for investment reasons. As for others, Â“no doubt Â— it makes a banker look more colorful and erudite when he can discuss his art at a dinner party,Â” Ms. Wächter-Campbell said.<br />
 <br />
 While some work with advisers to accumulate art piece by piece over a number of years, others buy a new vacation home and call to say, Â“Fill it with art.Â”<br />
 <br />

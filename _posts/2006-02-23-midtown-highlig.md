@@ -17,5 +17,5 @@ permalink: /2006/02/midtown-highlig.html
 <p>Eija-Liisa Ahtila&#8217;s 4-screen work <em>The Hour of Prayer</em> was a nice discovery in the back at <a href="http://www.artcal.net/event/view/3/1950">Marian Goodman</a> after visiting the Kentridge show.  There are more images of both Kentridge and Ahtila&#8217;s work in my <a href="https://www.flickr.com/photos/bloggy/sets/72057594049484418/"><span class="caps">NYC</span> Art 2006 set</a> on Flickr.</p>
 
 <p><img src="http://www.artcal.net/static/artcal-images/0/700.jpeg" alt="Tim Davis White Tiger" /></p>
-<p>Tim Davis, <em>White Tiger</em>, 2005, c-print, 35&quot; Ã— 44&quot; [image from gallery website]</p>
+<p>Tim Davis, <em>White Tiger</em>, 2005, c-print, 35&quot; × 44&quot; [image from gallery website]</p>
 <p>I love everything Tim Davis does, and this show at <a href="http://www.artcal.net/event/view/3/1833">Greenberg Van Doren</a> is no exception.  In some ways it is like Roe Ethridge&#8217;s last show at Andrew Kreps &#8212; it feels like a set of images the artist just likes.  If you&#8217;re a photographer like one of those, that&#8217;s good enough for me.</p>

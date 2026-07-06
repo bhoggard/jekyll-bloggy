@@ -17,7 +17,7 @@ permalink: /2005/03/diva-art-fair-1.html
 	<li>Patrick Jolley&#8217;s <em>Here After</em> (2004) at Prato-based <a href="http://www.nicolafornello.com/">Nicola Fornello</a>.  Yes, that&#8217;s edgy video work from a gallery in a town outside of Florence.  Can you imagine such a thing in Westchester?  We last saw Jolley&#8217;s work when we saw <a href="http://www.brooklynart.com/artists/reynoldsjolley/default.htm"><em>Burn</em></a> in a group show at the Chelsea Art Museum.</li>
 </ul>
 <ul>
-	<li><a href="http://jameswagner.com/mt_archives/004716.html">Steffan Saffer</a>, Susanne Weirich, and Christoph Draeger at <a href="http://www.mullerdechiara.com/">MÃ¼ller DeChiara</a></li>
+	<li><a href="http://jameswagner.com/mt_archives/004716.html">Steffan Saffer</a>, Susanne Weirich, and Christoph Draeger at <a href="http://www.mullerdechiara.com/">Müller DeChiara</a></li>
 </ul>
 <ul>
 	<li>Federico Solmi at Boreas &#8212; see <a href="http://jameswagner.com/mt_archives/004708.html">James</a> for more info on the artist</li>
@@ -35,7 +35,7 @@ permalink: /2005/03/diva-art-fair-1.html
 	<li>Carolee Schneemann at <a href="http://www.elgawimmer.com/">Elga Wimmer</a></li>
 </ul>
 <ul>
-	<li>Alexandre Castonguay&#8217;s interactive video-based works and Marc Audette&#8217;s amazing video installation involving projections on curved photo screens in the back at Montreal-based <a href="http://www.pfoac.com/">Pierre-FranÃ§ois Ouellette art contemporain</a>.</li>
+	<li>Alexandre Castonguay&#8217;s interactive video-based works and Marc Audette&#8217;s amazing video installation involving projections on curved photo screens in the back at Montreal-based <a href="http://www.pfoac.com/">Pierre-François Ouellette art contemporain</a>.</li>
 </ul>
 <ul>
 	<li>Eva Koch&#8217;s <em>NoMad</em> at <a href="http://www.magdabellotti.com/">Galer&iacute;a Magda Bellotti</a></li>

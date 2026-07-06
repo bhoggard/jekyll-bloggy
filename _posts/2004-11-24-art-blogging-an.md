@@ -14,6 +14,6 @@ Charles Mee, playwright</p>
 <blockquote>
 <p>But, if you would like to perform the plays essentially or substantially as I have composed them, they are protected by copyright in the versions you read here, and you need to clear performance rights with&#8230;</p>
 </blockquote>
-<p>James and I saw him at <a href="http://www.wallserestaurant.com/">WallsÃ©</a> when we were there with friends for one of the Monday night wine dinners (a bargain I might add).  We were probably the only people in the place excited to see him.  We didn&#8217;t react as strongly to seeing Kristen Johnson at the next table&#8230;</p>
+<p>James and I saw him at <a href="http://www.wallserestaurant.com/">Wallsé</a> when we were there with friends for one of the Monday night wine dinners (a bargain I might add).  We were probably the only people in the place excited to see him.  We didn&#8217;t react as strongly to seeing Kristen Johnson at the next table&#8230;</p>
 <p>If you prefer to read his plays via a real book, I recommend <a href="http://www.amazon.com/exec/obidos/ASIN/0801857929/tristanmedial-20">History Plays</a>.</p>
 <p>P.S.  I&#8217;m going to turn comments back on for everything but political posts.  Those attract too many right-wing idiots finding people to argue with via Google.</p>

@@ -6,8 +6,8 @@ permalink: /2006/03/saturday-highli-1.html
 ---
 
 <p>Favorite things seen in Chelsea on Saturday:</p>
-<p><a href="https://www.flickr.com/photos/bloggy/115563934/"><img border="0" src="https://static.flickr.com/44/115563934_6807f786c7.jpg" width="375" height="500" alt="Brock Enright & Ivan HÃ¼rzeler at Cynthia Broan" /></a></p>
-<p>Brock Enright &amp; Ivan HÃ¼rzeler&#8217;s <em>Forest</em> at <a href="http://www.artcal.net/event/view/1/1921">Cynthia Broan</a></p>
+<p><a href="https://www.flickr.com/photos/bloggy/115563934/"><img border="0" src="https://static.flickr.com/44/115563934_6807f786c7.jpg" width="375" height="500" alt="Brock Enright & Ivan Hürzeler at Cynthia Broan" /></a></p>
+<p>Brock Enright &amp; Ivan Hürzeler&#8217;s <em>Forest</em> at <a href="http://www.artcal.net/event/view/1/1921">Cynthia Broan</a></p>
 <p>You have one more week to see it.  Go on the hour and watch the 50-minute film.  It&#8217;s more than worth the time.  It&#8217;s a disturbing <em>Lord of the Flies</em> meets Outward Bound experience.</p>
 
 <p><a href="https://www.flickr.com/photos/bloggy/115574569/"><img border="0" src="https://static.flickr.com/40/115574569_6a88eed40b.jpg" width="500" height="375" alt="J Shih Chieh Huang at Virgil de Voldere" /></a></p>

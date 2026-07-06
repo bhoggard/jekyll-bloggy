@@ -5,10 +5,10 @@ categories: [Culture]
 permalink: /2003/11/newark-on-a-thu.html
 ---
 
-<p>I have tickets to something else, otherwise I would be at the Newark Museum on Thursday to see <a href="http://www.newarkmuseum.org/thecaribbeanabroad/featuredartists.htm#estevez">NicolÃ¡s Dumit EstÃ©vez</a>.  See James for more info on <a href="http://jameswagner.com/mt_archives/003167.html">NicolÃ¡s</a>.</p>
+<p>I have tickets to something else, otherwise I would be at the Newark Museum on Thursday to see <a href="http://www.newarkmuseum.org/thecaribbeanabroad/featuredartists.htm#estevez">Nicolás Dumit Estévez</a>.  See James for more info on <a href="http://jameswagner.com/mt_archives/003167.html">Nicolás</a>.</p>
 <p>__</p>
 <p>Super Merengue (SM)<br />
-by NicolÃ¡s Dumit EstÃ©vez<br />
+by Nicolás Dumit Estévez<br />
 Thursday, November 13, 2003, 6:00-8:00 p.m. <br />
 Location: The Newark Museum<br />
 49 Washington Street, Newark<br />

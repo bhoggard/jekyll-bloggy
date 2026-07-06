@@ -13,7 +13,7 @@ Recover<br />
 2003<br />
 Oil on canvas<br />
 82 &#215; 67 cm</div>
-<p>The show across the street at Klemens Gasser &amp; Tanja Grunert (no web site, so these are examples) is a group show titled <i>Every Heartbeat is Past and Gone!</i> with four European painters: <a href="http://sammlung-essl.at/frame.htm?/deutsch/ausstellungen/archiv/anzinger-lebschik.html">Siegfried Anzinger</a>, Axel KassebÃ¶hmer, <a href="http://sammlung-essl.at/frame.htm?/deutsch/ausstellungen/archiv/anzinger-lebschik.html">Marie Luise Lebschik</a>, and Andreas Schulze.</p>
+<p>The show across the street at Klemens Gasser &amp; Tanja Grunert (no web site, so these are examples) is a group show titled <i>Every Heartbeat is Past and Gone!</i> with four European painters: <a href="http://sammlung-essl.at/frame.htm?/deutsch/ausstellungen/archiv/anzinger-lebschik.html">Siegfried Anzinger</a>, Axel Kasseböhmer, <a href="http://sammlung-essl.at/frame.htm?/deutsch/ausstellungen/archiv/anzinger-lebschik.html">Marie Luise Lebschik</a>, and Andreas Schulze.</p>
 <div align="center"><img alt="anzinger-madonna.jpg" src="/mt/archives/anzinger-madonna.jpg" width="216" height="269" border="0" /><br />
 <br />
 Siegfried Anzinger<br />
@@ -23,7 +23,7 @@ Leimfarbe auf Leinwand<br />
 <br />
 <img alt="kasseboehmber.jpg" src="/mt/archives/kasseboehmber.jpg" width="425" height="289" border="0" /><br />
 <br />
-Axel KassebÃ¶hmer<br />
+Axel Kasseböhmer<br />
 Yellow, green and brown landscape I<br />
 1993<br />
 oil on canvas<br />

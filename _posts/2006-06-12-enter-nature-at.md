@@ -1,11 +1,11 @@
 ---
-title: "\"[Enter] Nature\" at GalerÃ­a Galou"
+title: "\"[Enter] Nature\" at Galería Galou"
 date: 2006-06-12 18:46:32 -04:00
 categories: [Postcard]
 permalink: /2006/06/enter-nature-at.html
 ---
 
-<p>Two works from a great show, curated by <a href="http://www.elcuervohomepage.com/">Marco Antonini</a>, at <a href="http://www.artcal.net/event/view/2/2614">GalerÃ­a Galou</a>.  It&#8217;s up through June 25.</p>
+<p>Two works from a great show, curated by <a href="http://www.elcuervohomepage.com/">Marco Antonini</a>, at <a href="http://www.artcal.net/event/view/2/2614">Galería Galou</a>.  It&#8217;s up through June 25.</p>
 <p><img alt="james-paterson6.jpg" src="/mt/archives/james-paterson6.jpg" width="481" height="323" /></p>
 <p>James Paterson:<br />
 <em>Untitled VI</em>, 2005<br />

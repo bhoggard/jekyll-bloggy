@@ -42,7 +42,7 @@ World Premiere</p>
 Anat Biletzki</p>
 <p>Performers:</p>
 <p>Richard Burkhart, Cello<br />
-Monique BuzzartÃ©, Trombone<br />
+Monique Buzzarté, Trombone<br />
 Idith Meshulam, Piano<br />
 Kristin Norderval, Voice<br />
 Philip Wharton, Violin</p>

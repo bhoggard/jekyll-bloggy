@@ -22,7 +22,7 @@ permalink: /2007/02/adaas-the-art-s-1.html
 <p>More quick highlights:</p>
 <ul>
 	<li>A collage/sculpture titled <em>Pebble</em> by Kurt Schwitters at <a href="http://www.knoedlergallery.com/">Knoedler &amp; Company</a></li>
-	<li>2 paintings from the late 1970s by Leon Golub of Henry Kissinger and ValÃ©ry Giscard d&#8217;Estaing at <a href="http://www.rhoffmangallery.com/">Rhona Hoffman</a></li>
+	<li>2 paintings from the late 1970s by Leon Golub of Henry Kissinger and Valéry Giscard d&#8217;Estaing at <a href="http://www.rhoffmangallery.com/">Rhona Hoffman</a></li>
 	<li>A wall of Albers and Judd at <a href="http://www.baeditions.com/">Brooke Alexander</a></li>
 	<li>The multiple-panel (ink, gesso gridwork) work by Felix Gonzalez-Torres, <em>Untitled (7 Days of Bloodwork)</em>, 1991, positioned next to two Agnes Martin grid ink works from the 1960s at <a href="http://www.andrearosengallery.com/">Andrea Rosen</a>.  Their booth also had some lovely Richard Tuttle works.</li>
 	<li>I was wondering if <a href="http://www.montgomerygallery.com/art/artwork.asp?key=489">this work</a> by Joseph Raphael, listed with a provenance from the Fine Arts Museums of San Francisco, is one that <a href="http://www.artsjournal.com/man/">Tyler Green</a> has written about.  I don&#8217;t know the story on how it came to be for sale.</li>

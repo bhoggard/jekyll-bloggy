@@ -8,13 +8,13 @@ permalink: /2006/11/klee-brasserie-1.html
 <p>Last night, James and I had dinner with friends at the new <a href="http://www.kleebrasserie.com/">Klee Brasserie</a> on Ninth Avenue. It was the first time we had spent dinner with the two of them, and they were up for the adventure of dining at a place that had been open less than a week.  It&#8217;s in the old Magnifico space, but you would be unlikely to recognize it.  It has been fully rearranged, with a long bar on one side.  I was told that the bar there at the moment isn&#8217;t the final version.</p>
 <p>The chef, Daniel Angerer, is Austrian, but I would describe the food as creative New York comfort food.  There are elements of Austrian/Germanic cooking, plus some Italian and other influences.  Not much in the way of Asian highlights.</p>
 <p>I like the space.  It&#8217;s comfortable, and the tables aren&#8217;t so close together that they have to pull one table out to seat people.  I refuse to eat at places that charge $20+ for entrees and then do that to the customers.  The sound level is good, which is another plus in its favor.  The place was pretty full, and we could hear each other at a largish table for 4 with no problem.</p>
-<p>The wine list is still being worked on, but the one we ordered from had a number of good deals on Austrian wines.  We had a GrÃ¼ner Veltiner and a BlaufrÃ¤nkisch both under $40.  There are a number of wines available by the glass or the carafe.</p>
+<p>The wine list is still being worked on, but the one we ordered from had a number of good deals on Austrian wines.  We had a Grüner Veltiner and a Blaufränkisch both under $40.  There are a number of wines available by the glass or the carafe.</p>
 <p>The food was very good, with perhaps a little more excitement in the appetizer course.  I have no idea why that is often the case, but I see it a lot when we eat out.  Among the group, we had</p>
 <ul>
 	<li>Shrimp cocktail with champagne mustard rather than cocktail sauce</li>
 	<li>Chicken soup that arrived with the broth in a French press</li>
 	<li>Char tartare with lime and golden beet &#8220;caviar,&#8221; and</li>
-	<li>Alsatian <a href="http://en.wikipedia.org/wiki/Tarte_flamb%C3%A9e">Tarte FlambÃ©e</a>, but was described as &#8220;Alsatian thin crust pizza.&#8221;  It was made with crÃ¨me fraÃ®che,  lardons, and Vidalia onions.  I&#8217;m a big fan of the dish, and it was one of the best versions I have ever had.  I think the next time I go, we might split it between a couple of people as an appetizer, as it was decently sized.</li>
+	<li>Alsatian <a href="http://en.wikipedia.org/wiki/Tarte_flamb%C3%A9e">Tarte Flambée</a>, but was described as &#8220;Alsatian thin crust pizza.&#8221;  It was made with crème fraîche,  lardons, and Vidalia onions.  I&#8217;m a big fan of the dish, and it was one of the best versions I have ever had.  I think the next time I go, we might split it between a couple of people as an appetizer, as it was decently sized.</li>
 </ul>
 <p>For main courses, we had</p>
 <ul>

@@ -8,9 +8,9 @@ permalink: /2006/03/physical-plants-1.html
 <p><img alt="notClown.jpg" src="/mt/archives/notClown.jpg" width="370" height="271" /></p>
 
 <blockquote><span class="caps">NOT</span> <span class="caps">CLOWN</span><br />
-by Steve Moore + Carlos TreviÃ±o<br />
+by Steve Moore + Carlos Treviño<br />
 <br />
-<span class="caps">DIRECTED</span> by Carlos TreviÃ±o<br />
+<span class="caps">DIRECTED</span> by Carlos Treviño<br />
 <br />
 In a time when clowns are tortured and circuses banned, a renegade troupe enacts the story of a girl who longs for their outlawed life.</blockquote>
 

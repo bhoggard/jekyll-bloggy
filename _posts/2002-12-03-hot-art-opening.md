@@ -20,7 +20,7 @@ after it has passed, but an effort to expose the<br />
 dishonesty of the domesticated adult experience,<br />
 which is best served by reviving the emotional and<br />
 psychological convictions of teenage-hood.&#8221;<br />
-Ã¢?? Excerpt from Rachel Howe&#8217;s Teenage Art Manifesto</p>
+â?? Excerpt from Rachel Howe&#8217;s Teenage Art Manifesto</p>
 <p>K48 is proud to present their first gallery<br />
 installation, coinciding with the release of their<br />
 third issue, Teenage Rebel.</p>

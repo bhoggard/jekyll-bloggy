@@ -15,7 +15,7 @@ permalink: /2007/06/too-much-to-do-1.html
 </ul>
 <p><strong>Lower East Side Openings</strong></p>
 <ul>
-	<li><a href="http://www.artcal.net/event/view/6/4974">New American Portrait</a> at Jen Bekman &#8211; Co-curated by Ms. Bekman and JÃ¶rg Colberg, editor the photo blog <a href="http://www.jmcolberg.com/weblog/">Conscientious</a></li>
+	<li><a href="http://www.artcal.net/event/view/6/4974">New American Portrait</a> at Jen Bekman &#8211; Co-curated by Ms. Bekman and Jörg Colberg, editor the photo blog <a href="http://www.jmcolberg.com/weblog/">Conscientious</a></li>
 	<li><a href="http://www.artcal.net/event/view/6/4980">Jacques Louis Vidal</a> at <span class="caps">SUNDAY</span> &#8212; the first <span class="caps">NYC</span> solo show by one of the artists in our <a href="http://danglingbetween.com/">Dangling Between</a> show</li>
 	<li><a href="http://www.artcal.net/event/view/6/4992">New Mutants</a> at Canada &#8212; including recent Hoggard/Wagner acquisition <a href="http://jameswagner.com/mt_archives/006078.html">Michael Williams</a></li>
 </ul>

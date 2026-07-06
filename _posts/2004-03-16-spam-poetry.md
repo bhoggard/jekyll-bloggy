@@ -6,4 +6,4 @@ permalink: /2004/03/spam-poetry.html
 ---
 
 <p>I received spam today with this subject:</p>
-<blockquote>Imagine Super ViagrÃ¡! A norwich atheist gremlin.</blockquote>
+<blockquote>Imagine Super Viagrá! A norwich atheist gremlin.</blockquote>

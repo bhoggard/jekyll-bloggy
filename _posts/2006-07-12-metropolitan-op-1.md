@@ -16,7 +16,7 @@ permalink: /2006/07/metropolitan-op-1.html
 <p>It says that the works in the inaugural exhibiton are &#8220;inspired by the heroines of the seasonÂ’s six new productions.&#8221;  They are:</p>
 <ul>
 	<li>Cecily Brown (Suor Angelica in Il Trittico)</li>
-	<li>John Currin (Helena in Die Ã„gyptische Helena)</li>
+	<li>John Currin (Helena in Die Ägyptische Helena)</li>
 	<li>Barnaby Furnas (Euridice in Orfeo ed Euridice)</li>
 	<li>Makiko Kudo (Princess Yue-yang in The First Emperor)</li>
 	<li>Richard Prince (Cio-Cio-San in Madama Butterfly)</li>

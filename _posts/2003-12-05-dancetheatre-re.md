@@ -6,7 +6,7 @@ permalink: /2003/12/dancetheatre-re.html
 ---
 
 <p>We saw the opening program of <a href="http://www.dtw.org/2003fall/central_station_03.htm">Central Station</a> &#8212; &#8220;a multi-week, multi-venue and multi-city program that will bring East/Central European work into the spotlight in many U.S. communities.&#8221;</p>
-<p>The <a href="http://www.dtw.org/2003fall/shared_central_station_03.htm">evening</a> consisted of <i>La Sonnambula</i> by Galina Borissova (from Bulgaria), <i>Two</i> and <i>Stretching Thighs</i> by MÃ¡rta LadjÃ¡nszki (Hungary), and <i>Serial Paradise</i> by Cosmin Manolescu.</p>
+<p>The <a href="http://www.dtw.org/2003fall/shared_central_station_03.htm">evening</a> consisted of <i>La Sonnambula</i> by Galina Borissova (from Bulgaria), <i>Two</i> and <i>Stretching Thighs</i> by Márta Ladjánszki (Hungary), and <i>Serial Paradise</i> by Cosmin Manolescu.</p>
 <div align="center"><img alt="galina_borissova_lg.jpg" src="/mt/archives/galina_borissova_lg.jpg" width="200" height="120" border="0" /><br />
 <br />
 Galina Borissova</div>
