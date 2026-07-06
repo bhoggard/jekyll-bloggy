@@ -1,0 +1,9 @@
+---
+title: "Tribute Album for Tom Cora"
+date: 2009-02-12 23:59:47 -05:00
+categories: [Music]
+permalink: /2009/02/tribute-album-for-to.html
+---
+
+<p>We just listened to this amazing 2 CD set titled <a href="http://www.amazon.com/gp/product/B00000IWO5?ie=UTF8&amp;tag=tristanmedial-20&amp;link_code=as3&amp;camp=211189&amp;creative=373489&amp;creativeASIN=B00000IWO5">Hallelujah, Anyway: Remembering Tom Cora</a>.  It&#8217;s an album created as a tribute to the musician <a href="http://en.wikipedia.org/wiki/Tom_Cora">Tom Cora</a> after his death in 1998, on John Zorn&#8217;s <a href="http://www.tzadik.com/">Tzadik</a> label.</p>
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_aea094ab-3a8d-4142-8576-191d1cf3b01c"  WIDTH="250px" HEIGHT="250px"> <PARAM NAME="movie" VALUE="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Ftristanmedial-20%2F8014%2Faea094ab-3a8d-4142-8576-191d1cf3b01c&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Ftristanmedial-20%2F8014%2Faea094ab-3a8d-4142-8576-191d1cf3b01c&Operation=GetDisplayTemplate" id="Player_aea094ab-3a8d-4142-8576-191d1cf3b01c" quality="high" bgcolor="#ffffff" name="Player_aea094ab-3a8d-4142-8576-191d1cf3b01c" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="250px" width="250px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Ftristanmedial-20%2F8014%2Faea094ab-3a8d-4142-8576-191d1cf3b01c&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>

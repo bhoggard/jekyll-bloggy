@@ -1,0 +1,13 @@
+---
+title: "Lilibeth Cuenca Rasmussen: Vagina Painting"
+date: 2008-02-29 12:56:44 -05:00
+categories: [Art]
+permalink: /2008/02/lilibeth-cuenca.html
+---
+
+<p><object type="application/x-shockwave-flash" data="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&feedurl=http%3A%2F%2Fbhoggard%2Eblip%2Etv%2Frss&file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F712203&showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" width="400" height="255" allowfullscreen="true" id="showplayer"><param name="movie" value="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&feedurl=http%3A%2F%2Fbhoggard%2Eblip%2Etv%2Frss&file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F712203&showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" /><param name="quality" value="best" /><embed src="http://blip.tv/scripts/flash/showplayer.swf?enablejs=true&feedurl=http%3A%2F%2Fbhoggard%2Eblip%2Etv%2Frss&file=http%3A%2F%2Fblip%2Etv%2Frss%2Fflash%2F712203&showplayerpath=http%3A%2F%2Fblip%2Etv%2Fscripts%2Fflash%2Fshowplayer%2Eswf" quality="best" width="400" height="255" name="showplayer" type="application/x-shockwave-flash"></embed></object></p>
+<p><a href="http://jameswagner.com/mt_archives/006802.html">Lilibeth Cuenca Rasmussen</a> recreates Shigeko Kubota&#8217;s 1965 performance <a href="http://www.artnotart.com/fluxus/skubota-vaginapainting.html">&#8220;Vagina Painting&#8221;</a> at her opening at <a href="http://www.artcal.net/event/view/7/6565">Renwick Gallery</a>.  Click the screen icon below the image to make it bigger. This was one of 13(!) recreations in addition to her performance of her piece &#8220;The Artists&#8217; Song&#8221; in a three hour time span.  She is hardcore.</p>
+<p>Yes, that guy in the yellow shirt in the background really is working his Blackberry the entire time.  I was standing near him earlier and heard him raving about security prices in after-hours trading.</p>
+<p>I will be adding some images to a flickr set when I have time to edit them a bit, but here is one of her reenacting Janine Antoni&#8217;s &#8220;Loving Care&#8221;, 1992-1996.</p>
+<p><a href="https://www.flickr.com/photos/bloggy/2300649874/" title="Lilibeth Cuenca Rasmussen performing Janine Antoni's &quot;Loving Care&quot;, 1992-1996 by hoggardb, on Flickr"><img src="https://farm3.static.flickr.com/2090/2300649874_1ca1298dd8.jpg" width="500" height="375" alt="Lilibeth Cuenca Rasmussen performing Janine Antoni's &quot;Loving Care&quot;, 1992-1996" /></a></p>
+<p>Click <a href="http://blip.tv/file/706127">here</a> if you don&#8217;t see the video at the top of the post.</p>

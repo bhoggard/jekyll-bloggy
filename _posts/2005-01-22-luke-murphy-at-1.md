@@ -1,0 +1,19 @@
+---
+title: "Luke Murphy at Canada"
+date: 2005-01-22 17:47:06 -05:00
+categories: [Culture]
+tags: [Technology]
+permalink: /2005/01/luke-murphy-at-1.html
+---
+
+<p>I hate writing about shows after they are closed, but nearly a week of having the flu messed up my schedule in a big way.  Happily for this artist, the Flash-based work I want to write about is available for viewing on his <a href="http://www.lukelab.com/">web site</a>.  In fact, I love that the description of the medium on the gallery checklist is &#8220;file on disk.&#8221;  I&#8217;m illustrating with stills from <a href="http://jameswagner.com/mt_archives/004618.html">James</a>.</p>
+<p><img src="http://jameswagner.com/mt_archives/MurphyLukeCascade.jpg" alt="" /><br />
+Luke Murphy <em>Cascade</em> 2004 file on disk, (slow-shutter) still from installation projection</p>
+<p>The first work, titled <em>Cascade</em>, uses an algorithm to animate and rotate the shovels of the piece, which show different images as their backgrounds within the outline of the shovel shape.  The sound is also algorithmic, with different tones coming from different shovels as they hit a certain angle during rotation.</p>
+<p>Like the other work, it is an algorithm designed so that no viewing of the work is like another.  You are not merely watching some playback of the artist-designed animation.</p>
+<p><img src="http://jameswagner.com/mt_archives/MurphyLukePorno.jpg" alt="" /><br />
+Luke Murphy <em>Porno Painter/Eroloop</em> 2004 file on disk, still from installation projection</p>
+<p>The second work, titled <em>Porno Painter / Eroloop</em>, animates words found in the meta tags of porn web sites.  Meta tags are information inserted into the <span class="caps">HTML</span> code of a web page.  They&#8217;re meant to be read by things like search engines, not humans.  Since the dawn of Google they seem to be less important than they once were, but sites that want to be found by people using search engines still use them.  The <a href="http://www.lukelab.com/sitewide/embed.php?file=/lab/pornopaint/pornopaint1.swf&amp;bgcol=000000&amp;ht=600&amp;wd=740">version</a> on his web site reacts to one&#8217;s mouse cursor, but the version we saw at the gallery did not.  The gallery version becomes quite dense at times, as you can see from James&#8217;s still.  The work also has an attractive electronic soundtrack designed by Murphy.</p>
+<p>A lot of artists are working with technology and art, but I don&#8217;t think that many of them pull off using the strengths of technology, such as writing a program which then generates the art (possibly in random ways like a high-tech bow to John Cage), rather than just using it as a useful animation or painting tool.  I think Luke Murphy does pull off that feat.  The works are engaging and beautiful, plus there is an intelligence to them that one can appreciate.</p>
+<p>Some other people I admire who are working in a related vein include <a href="/2004/09/john-f-simon-jr.html">John F. Simon, Jr.</a> and <a href="http://www.potatoland.org/">Mark Napier</a>.  Simon often creates computer works that appear as endless videos which never repeat.   I have never talked with Mark about his work (I know of it through <a href="http://culturekitchen.com/">Liza Sabater</a> who describes herself as his &#8216;better half&#8217;), but from what I understand, many of them use algorithms to generate the painterly images visible on his site.  The end result, such as a digital painting or print, becomes the artist&#8217;s &#8220;product&#8221; for public consumption, not the program which created it.</p>
+<p>Despite knowing Cory Arcangel for a while, I still don&#8217;t have a feel for where his Nintendo work fits into the burn-in-exactly-what-I-want vs. algorithmic scale.  Maybe that&#8217;s another post.</p>

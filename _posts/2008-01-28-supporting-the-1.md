@@ -1,0 +1,18 @@
+---
+title: "Supporting the troops = encouraging anti-gay policies"
+date: 2008-01-28 15:12:48 -05:00
+categories: [Politics]
+permalink: /2008/01/supporting-the-1.html
+---
+
+<p>The media, and our politicians, are too stupid to understand that educational institutions have very good reasons to deny access to their campuses to <span class="caps">ROTC</span> and military recruiters.  They are anti-gay organizations.  Yet, schools are punished financially if they do not allow them to set up recruiting on their campuses, and our all of our leading Democratic candidates for president think that&#8217;s just fine. Can you imagine schools allowing people who discriminate based on religion or race to set up hiring fairs?</p>
+<p>Today&#8217;s <em>Newsday</em> has an excellent <a href="http://www.newsday.com/news/opinion/ny-opgil285554700jan28,0,6800731.story">column</a> by Brett Gilbert and <a href="http://www.lfirm.com/bio/JonathanEzor.asp">Jonathan Ira Ezor</a> of the Touro College Jacob D. Fuchsberg Law Center.    I&#8217;ve provided an excerpt below.</p>
+<blockquote>
+<p><strong>Candidates, media miss point about anti-gay bias</strong></p>
+<p>At the <span class="caps">MSNBC</span> Democratic presidential debate in Las Vegas earlier this month, moderator Tim Russert asked Sens. Hillary Rodham Clinton and Barack Obama and former Sen. John Edwards whether they would &#8220;vigorously enforce&#8221; the law that requires colleges and universities to allow military recruiters or <span class="caps">ROTC</span> on their campuses, or risk losing federal funding. All three candidates quickly stated that they would enforce this law, because of their support for the military.</p>
+<p>Unfortunately, while support for military personnel and national service is laudable, the candidates, Russert and the media in their post-debate analyses missed a real opportunity to focus on the reason why this law &#8211; particularly the recruiting component &#8211; has been so controversial and opposed by many within the higher education community.</p>
+<p>It has nothing to do with support for the armed services in general. Rather, it is a reaction against the ongoing discrimination against gays and lesbians who wish to serve their country without having to lie about their sexual orientation.</p>
+<p>The law in question, called the Solomon Amendment, was first passed in 1995 during the Clinton administration and has been toughened in the years since. Originally, Congress focused only on grants to universities from the Department of Defense. With the current form of the amendment, though, Congress has denied grants and contracts not only from the Department of Defense, but also from the Department of Education and certain other departments and agencies to any college or institution that refuses access to <span class="caps">ROTC</span> or military recruiters, or even refuses to give recruiters detailed personal information about eligible students.</p>
+<p>For most colleges and universities, refusing federal funds is not an option, so they are forced to comply with this law.</p>
+<p>&#8230;</p>
+<p>In reality, though, any statement of protest loses its power when it must be accompanied by unfettered access to facilities, students and information for those against whom one is protesting. This isn&#8217;t like playing golf at a country club that won&#8217;t allow women members. This is akin to providing land, caddies and potential member information to that same club, while claiming to be against the discriminatory policies. It sounds hypocritical, and it feels that way, too.</blockquote></p>

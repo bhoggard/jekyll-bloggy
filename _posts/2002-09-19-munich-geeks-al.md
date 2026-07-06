@@ -1,0 +1,20 @@
+---
+title: "Munich, Geeks, Alte Pinakothek"
+date: 2002-09-19 18:32:33 -04:00
+categories: [Travel]
+permalink: /2002/09/munich-geeks-al.html
+---
+
+<p>I&#8217;m trying to write a little bit before I fall asleep.  My geek conference started yesterday.  Except for a few fabulous exceptions, such as this Dutch guy:</p>
+<p><img alt="dutch perl guy - one of the presenters" src="/mt/archives/dutch-perl-guy.jpg" width="313" height="500" border="0" /></p>
+<p>this group makes all of the financial conventions I&#8217;ve attended look like a supermodel gathering.   Loads of pasty, out of shape guys with long hair and beards &#8212; not as a fashion statement, but for low maintenance.  Not that I have much of an excuse on the beard-while-traveling front right now.</p>
+<p><a href="https://bloggy.com/mt/archives/barry-at-pfistermuehle.html" onclick="window.open('http://bloggy.com/mt/archives/barry-at-pfistermuehle.html', 'popup', 'width=375,height=500,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false"><img src="/mt/archives//barry-at-pfistermuehle-thumb.JPG" width="75" height="100" border="0" /></a></p>
+<p>The exceptions are generally from Europe.  The guys from Copenhagen are in a class all their own, as are a few of the German ones.</p>
+<p>For the Mac fans &#8212; Macs make up a majority of the computers here at the conference.</p>
+<p>I was pleased to see my fellow Americans making fun of Bush.  I feel like wearing a big &#8220;I&#8217;m not one of those bad Americans&#8221; button while I&#8217;m here.  It&#8217;s horrifying to see the U.S. and Iraq on the front page of every paper here each morning.</p>
+<p>Today was a phenomenal day on the food front.  We had lunch at Pfistermuehle (Pfisterstrasse 4).  Wow!  It was incredible.  I had a trio of soups for my appetizer:  venison broth with a pistachio dumpling, foamed cream of chestnet mushrooms, and a creamed fennel and celery root soup.  That was followed by homemade ravioli filled with freshwater crayfish &#8212; yes they have those here &#8212; on a bed of Savoy cabbage.  It was accompanied by a bottle of Austrian Gruener Veltliner.</p>
+<p>We went to the <a href="http://www.neue-pinakothek.org/explorer/altef.html">Alte Pinakothek</a> for three hours tonight &#8212; it&#8217;s open until 10pm on Thursdays.  I always knew they had an amazing collection, but I saw so many paintings tonight that I have loved for years, but only knew from books.  They have a huge number of Breughels (8 rooms!), Duerers, Cranachs, Rembrandts, Titians, etc.  I finally got to see the Rembrandt self-portrait I&#8217;ve always loved:</p>
+<p><img alt="rembrandt-self-portrait.JPG" src="/mt/archives/rembrandt-self-portrait.JPG" width="75" height="100" border="0" /></p>
+<p>The museum building was damaged by bombing in WW II, and it&#8217;s interesting to see that they&#8217;ve chosen to make it obvious in places that they&#8217;ve only partially restored the building.  There are areas that were once more decorative that have been left plain.</p>
+<p>We had dinner afterward (at 10pm) at an Italian restaurant in a passage called Amalianpassage between our hotel&#8217;s street (Amalienstrasse) and Turkenstrasse.  The restaurant, Il Baretto, was pretty authentically Italian.  The older woman waiting on us said she had lived in Germany for 40 years, but she was still Italian.  She was from Naples, my favorite city in Italy.  We all three spoke in a mixture of German, Italian and English.  I told her that my simple (and perfect) pasta dish couldn&#8217;t be made in <span class="caps">NYC</span> today, and she said that was because they were all American there now, instead of Italian.</p>
+<p>When she found out we were from New York, she went, &#8220;Ooooh&#8221;, and frowned.  I told her, &#8220;It&#8217;s OK&#8221;, and she said something like &#8220;the world just goes on&#8221;.  We also told her we really hated Bush, that he was terrible.  She responded, &#8220;like Berlusconi&#8221;.</p>

@@ -1,0 +1,24 @@
+---
+title: "Sunday in Williamsburg"
+date: 2003-04-28 19:15:35 -04:00
+categories: [Culture]
+permalink: /2003/04/sunday-in-willi.html
+---
+
+<p>Herein lies the tale of a Sunday in Williamsburg, in which our hero tours some galleries with friends, spots <a href="http://cocaine.org/vials.jpg">crack vials</a> on Bedford, ogles hot tattooed (straight?) skateboarders with &#8220;lovely&#8221; in their vocabulary, and is accosted at <a href="http://www.freewilliamsburg.com/restaurants.html#relish">Relish</a> by people at the next table saying &#8220;Williamsburg really seems like a hotbed for real estate.&#8221;</p>
+<p>I revisited two shows that I mentioned in an <a href="/2003/04/culture-recomme.html">earlier post</a>:  &#8220;Decade&#8221; at <a href="http://www.schroederromero.com/">Schroeder Romero</a> and &#8220;Soft Cell&#8221; at <a href="http://www.foxyproduction.com/">Foxy Productions</a>.  I attended the openings of both shows, and I wanted to go back to spend a little quality time with them.</p>
+<p>Schroeder Romero&#8217;s show is worth spending a bit of time with, since there are over 50 artists in the show.  Make sure you check out the Williamsburg art timeline near the entrance.  A trip to Williamsburg just doesn&#8217;t feel right without a chance to visit with Sara Jo and Lisa.  They even offered to introduce my friends to some single gay men at their next opening!</p>
+<p>I really love the work at Foxy Productions by <a href="http://www.arcoromano.com/moro.htm">Teresa Moro</a> &#8212; you might have to use Internet Explorer to get the page to display.  Ask to see her gouaches that they have as well.  They&#8217;re exquisite.</p>
+<p>The painting show at <a href="http://www.blackandwhiteartgallery.com/">Black &amp; White</a> by <a href="http://www.blackandwhiteartgallery.com/kozik.htm">KK Kozik</a>, titled &#8220;Ashcan Rococo&#8221;, is pretty cool.  There is a sly humor in them that&#8217;s not always apparent when you first see the brightly colored canvases.  Those aren&#8217;t your father&#8217;s oil colors &#8212; I thought they were acrylic at first.  If you haven&#8217;t seen <a href="http://www.blackandwhiteartgallery.com/thomas/index.htm">Austin Thomas</a>&#8217;s sculpture out in the &#8220;sculpture garden&#8221;, go check them out.  I first encountered this gallery when they showed work by my friend <a href="http://www.blackandwhiteartgallery.com/gale/index.htm">Meighan Gale</a>.</p>
+<p>The group show at <a href="http://www.parkersbox.com/">Parker&#8217;s Box</a>, titled &#8220;Grounds,&#8221; isn&#8217;t totally successful, but there are some sweet sculptures/installations by Ezra Parzybok and some photographs by Ravi Rajakumar, who collected moments in cartooons where no characters are present.</p>
+<blockquote><img alt="Robert Grunder at *sixtyseven" src="/mt/archives/grunder-star67.jpg" width="200" height="201" border="0" /><br />
+<br />
+Robert Grunder</blockquote>
+<p>The show of paintings by Robert Grunder at <a href="http://www.star67.org/">*sixty seven</a>, inspired by his growing up in a planned community, is quite nice.  Don&#8217;t miss the selection of works by other gallery artists in the back room, including the video titled &#8220;Your Head is a Cloud&#8221; by <a href="http://www.teipen.com/jeremiah/">Jeremiah Teipen</a>.</p>
+<blockquote><img alt="zahaykevich04.jpg" src="/mt/archives/zahaykevich04.jpg" width="337" height="229" border="0" /><br />
+<br />
+Tamara Zahaykevich<br />
+<i>smoke-pillow-ghost</i>, 2002</blockquote>
+<p>I loved <a href="http://www.bellwethergallery.com/zahaykevich.html">Tamara Zahaykevich</a>&#8216;s show of foam core sculptures in the back at <a href="http://www.bellwethergallery.com/">Bellwether</a>.  The front room has work by <a href="http://www.bellwethergallery.com/bauer.html">John Bauer</a>.  I like him, and I like some of his work I&#8217;ve seen in the past &#8212; especially works on paper &#8212; but I don&#8217;t know where he&#8217;s going with his paintings lately, and I can&#8217;t say I&#8217;m excited about them.</p>
+<p>I haven&#8217;t made it to Meredith Allen&#8217;s show at <a href="http://www.imnil.com/">im n iL</a> (in Greenpoint) yet, but it&#8217;s there through May 11 and I need to make a trip to see it.  I ran into her on her bicycle as we were headed over to Schroeder Romero, next to Brooklyn&#8217;s most fabulous Laundromat.  Have you seen that thing?  It has aisles wider than my apartment!  Soon I&#8217;ll be able to link to her homepage which I&#8217;m working on&#8230;</p>
+<p>I picked up cards for a couple of shows in Manhattan that I need to go see: <a href="http://www.chelseaartmuseum.org/exhibits/2003/anxiety/index.html">Anxiety</a> at the Chelsea Art Museum, and <a href="http://67.89.63.10/here/website/showDetail.cfm?showID=890">Airport &#8217;03</a> at <a href="http://www.here.org/"><span class="caps">HERE</span></a>.</p>

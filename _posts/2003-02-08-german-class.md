@@ -1,0 +1,11 @@
+---
+title: "German class"
+date: 2003-02-08 22:13:51 -05:00
+categories: [General]
+permalink: /2003/02/german-class.html
+---
+
+<p>I forgot to mention that I started German class at <a href="http://www.nyu.edu/deutscheshaus/">Deutsches Haus</a> a couple of weeks ago.  I&#8217;ve wanted to study German on a more rigorous basis for a while.  I love the country, its culture, and its people, and the events in this county since November 2000 have made me think about leaving, at least temporarily, at some point.  Germany is a country that makes it relatively easy for technical workers to legally work there.  It is also a place that values high culture in a way even <span class="caps">NYC</span> barely does these days &#8212; except perhaps in the visual arts.  I could never hear a daring contemporary opera at Lincoln Center, but even provincial cities in Germany do it all the time.  You also have to love a country where the equivalent of <span class="caps">CNN</span> or Time put &#8220;Culture&#8221; and &#8220;Books&#8221; on the list of main navigation links on their homepages.</p>
+<p>Several things struck me as I was reading the introductory material in the textbook.  One is that the texts talk about diversity &#8212; specifically referring to one woman as both Turkish and German.  Another is that they don&#8217;t shy away from the ugly aspects of Germany&#8217;s 20th century history.  In a section devoted to the story of two women tourists, one mentions wanting to see the city&#8217;s synagogue, and the explanatory text (with photos) describes it as built in 1913, destroyed in 1938 by the Nazis, and now restored as a Museum.  Can you imagine such a thing, say concentration camps for Japanese citizens, in an American English-for-foreigners textbook?</p>
+<p>On a lighter note, I&#8217;m amused, as a New Yorker, to see references to the exact time that a bus or train arrives somewhere.  In my experience in Munich, I could count on a streetcar (S-Bahn) to arrive at the time indicated on the schedule at the stop.  One last item from the textbook: some of the vocabulary words include political words like &#8220;protest&#8221;.</p>
+<p>I was reminded to write this entry after going to pick up my new <a href="http://www.costelectronics.com/frandbnewger.html">toy</a>, at an Orthodox Jewish-owned store, no less.</p>

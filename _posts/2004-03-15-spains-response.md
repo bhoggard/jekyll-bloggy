@@ -1,0 +1,23 @@
+---
+title: "Spain's response to terrorism"
+date: 2004-03-15 00:25:38 -05:00
+categories: [War]
+permalink: /2004/03/spains-response.html
+---
+
+<p>After 9/11, we attended demonstrations to say that we wanted justice for the awful attacks of that day, but we did not want innocent people killed as the <span class="caps">USA</span> lashed out in anger.  There is a difference between combating terrorism and killing innocent people to make (some of) us feel better.  I remember &#8220;patriotic&#8221; New Yorkers screaming awful things at us during these demonstrations.</p>
+<p>Those who argue that dealing with terrorism as a crime is somehow appeasement are arguing that American lives are worth more than the civilians we kill when we drop bombs from 30,000 feet in revenge.  We still haven&#8217;t caught the people responsible for 9/11, but we have killed tens of thousands of people in Afghanistan.  It is as if Italy chose to deal with the mafia by carpet-bombing Palermo with cluster bombs.</p>
+<p>We diverted resources to attacking Iraq rather than chase after Al Qaeda, even though Iraq had nothing to do with 9/11.  We have now killed <a href="http://www.iraqbodycount.net/">at least 10,000 civilians</a> in Iraq.</p>
+<p>I&#8217;m saying all of these things because I was just looking at <a href="http://search.news.yahoo.com/search/news/?c=news_photos&p=peace+spain">photos</a> of the anti-terrorism demonstrations in Spain.  Our country is ready to descend into barbarism over the War on Terrorism.  Spain is saying they want justice for the attacks, but they do not want innocents killed in the vain hope of making them safer from attack.  At least 11 million people demonstrated around the country on Friday.</p>
+<p><img alt="spain-paz.jpg" src="/mt/archives/spain-paz.jpg" width="409" height="290" border="0" /></p>
+<p>Spanish people holding posters saying &#8216;Peace&#8217; protest over lack of information on Thursday&#8217;s bombings on trains outside the ruling Popular Party&#8217;s headquarters in the center of Madrid, Saturday March 13, 2004. Some 3,000 people chanted accusations that Spain&#8217;s government is hiding the truth about bombings that killed 200 people. (AP Photo/Denis Doyle)</p>
+<p><img alt="spain-soccer.jpg" src="/mt/archives/spain-soccer.jpg" width="409" height="255" border="0" /></p>
+<p>Barcelona&#8217;s Brazilian player Ronaldinho, second right, and Luis Garcia, second left, wear shirts with, No to Terrorism, Yes to Peace, on them before a first division soccer match against Murica in Murcia, Spain, Sunday March 14, 2004. The shirts are a protest against the Madrid bomb attacks on trains last Thursday that killed 200 and injured another 1,500. The other two Murcia players are unidentified. (AP Photo/Ramon Espinosa)</p>
+<p><img alt="soccer-spain-fan.jpg" src="/mt/archives/soccer-spain-fan.jpg" width="409" height="382" border="0" /></p>
+<p>Barcelona&#8217;s Dutch player Edgar Davids, second right, protects a fan from a security policeman after the fan ran on to the pitch with the words No to Terrorism, and Peace written on his chest during a first division soccer match between Murcia and Barcelona in Murcia, Spain, Sunday March 14, 2004. The fan was refering to the bomb attacks on Madrid trains last Thursday that killed 200 people and injured another 1, 500. (AP Photo/Ramon Espinosa)</p>
+<p><img alt="spain-girl-applaud.jpg" src="/mt/archives/spain-girl-applaud.jpg" width="409" height="269" border="0" /></p>
+<p>A girl gets out of her car to applaude as she sits in a traffic jam waiting for several thousand demonstrators to pass by as they march through the center of Madrid, Spain, early Sunday morning March 14, 2004. Later Sunday the Spanish population will vote for general elections, but demonstrators took to the streets protesting the government&#8217;s failure to link the Thursday March 12th bombings which claimed the lives of 200 people in coordinated attacks on commuter trains, to al-Qaida. Sign at rightreads &#8216;Peace&#8217;. (AP Photo/Peter Dejong)</p>
+<p><img alt="spain-atocha-paz.jpg" src="/mt/archives/spain-atocha-paz.jpg" width="290" height="409" border="0" /></p>
+<p>A hand written sign in Spanish saying &#8216;peace&#8217; is seen on one of the windows at Madrid&#8217;s railway station Atocha, Saturday, March 13, 2004. Powerful explosions rocked three Madrid train stations, including Atocha on Thursday, March 11, 2004, killing 200 rush-hour commuters and wounding more than 1, 240 in Spain&#8217;s worst terrorist attack ever. (AP Photo/Anja Niedringhaus)</p>
+<p>__</p>
+<p>We put up a cross at the <span class="caps">WTC</span> after 9/11 (and it&#8217;s still there).  Can you imagine someone painting a peace sign there?</p>

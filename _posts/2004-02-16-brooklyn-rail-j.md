@@ -1,0 +1,13 @@
+---
+title: "Brooklyn Rail: John Waters"
+date: 2004-02-16 17:58:15 -05:00
+categories: [Culture]
+permalink: /2004/02/brooklyn-rail-j.html
+---
+
+<p>Brooklyn Rail has a John Waters <a href="http://www.brooklynrail.org/lights/feb04/waters.html">interview</a>.  Given that it&#8217;s not the NY Times, it&#8217;s a bit more about art than the <a href="/2004/02/you-can-look-at.html">other one</a>.</p>
+<blockquote><b>Waters:</b> Andy Warhol used to say his movies were better to think about than see. Well, this is true here too. In Eat Your Makeup thereÂ’s a scene thatÂ’s important where we do the entire Kennedy assassination, where Divine plays Jackie. Two years after it happened we shot it and people were really pissed off about it.<br />
+<br />
+<b>Rail:</b> Just like after 9/11, you couldnÂ’t do anything that related to it in content without being &#8220;respectful of the tragedy&#8221; or else youÂ’re suddenly a national traitor and &#8220;unpatriotic.&#8221;<br />
+<br />
+<b>Waters:</b> Yup. And thatÂ’s what IÂ’m saying, it was almost like that. Oh Andy [Warhol] would have. Andy would have done a beautiful painting of thatÂ— I think he would have. The rest of Eat Your Makeup is all right. It has some good stuff in it, but itÂ’s a 40 minute film that should have been 15 minutes. I learned that as I went along. Now they canÂ’t stop me from cutting. My movies now would be 10 minutes long if they didnÂ’t stop me in the editing room. Just the good parts! ThatÂ’s what this photo work is. Sometimes the good part is 1/24 of a frame. ThatÂ’s really cutting it down. (Laughs).</blockquote>

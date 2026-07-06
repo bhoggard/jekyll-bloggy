@@ -1,0 +1,14 @@
+---
+title: "Take Me Out"
+date: 2002-09-08 07:04:56 -04:00
+categories: [Culture]
+permalink: /2002/09/take-me-out.html
+---
+
+<p>I&#8217;m not normally awake at this hour, but I couldn&#8217;t sleep.  Forgive the incoherence.</p>
+<p>We saw &#8220;Take Me Out&#8221; &#8212; yes the gay baseball play &#8212; at the <a href="http://www.publictheater.org/">Public Theater</a> yesterday afternoon.  I didn&#8217;t it expect it to be so good. It&#8217;s a great play, and this is coming from someone who could not care less about baseball.  It took me a little while to get used to the idea of baseball players with such vocabularies, but I got over it.  I think Joe Mantello as the director really &#8220;nailed&#8221; the play, and the cast is excellent.  The John Rocker-type character is, in a lot of ways, the most interesting character in the play.  How much leeway do we give damaged people to be&#8230; awful?  Yes, there&#8217;s male nudity in it, and the cast is attractive, but that&#8217;s not really the reason to see the play.  If anything, it&#8217;s a bit distracting from what is a good text.  I have to single out Denis O&#8217;Hare as the gay player&#8217;s money manager &#8212; he knew how to &#8220;own&#8221; the stage during his several monologues.</p>
+<p>I really recommend it.  If <a href="http://jameswagner.com">James</a>, who doesn&#8217;t even know how to pronounce Derek Jeter&#8217;s last name, loved it, excusing yourself from attending because &#8220;you don&#8217;t like baseball&#8221; doesn&#8217;t make sense.</p>
+<p>There were two women sitting next to us.  One was like us &#8212; not interested in baseball, but interested in theater.  (I can never decide when to use theatre vs. theater.)  Her friend was a total baseball fanatic &#8212; someone who, when visiting another city, goes to visit stadiums just to see them whether there&#8217;s a game or not.  One of the two women complimented James on his (slash) No War button, and he gave her one to wear.  The other one said, &#8220;I would wear the opposite &#8212; nuke em&#8217; all!&#8221;  Is anyone out there surprised when I tell you that the baseball fanatic was the &#8220;nuke &#8217;em&#8221; lady?</p>
+<p>We separated to run errands as we walked home.  I dropped by <a href="http://www.strandbooks.com/">The Strand</a> on my way home.  For someone like me, who finds brains sexier than brawn, the Strand is the hottest spot in the city.  So many smart, attractive men, looking at books, looking at each other, looking at books&#8230;</p>
+<p>As I walked home up Fifth Avenue, I spotted <a href="http://www.queenmother.tv/nycgirl/amanda/aman.html">Amanda Lepore</a> in a torn cut-off t-shirt and shorts.  Wow &#8212; I&#8217;ve never seen her in daylight before.</p>
+<p>Once I got to Chelsea, the burning question in my mind became:  Why do gay men who are kind of&#8230; lumpen feel the need to wear sunglasses that really only work on someone like David Beckham?</p>
