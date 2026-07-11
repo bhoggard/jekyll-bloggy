@@ -46,6 +46,25 @@ main h1 {
   }
 }
 
+/* Preview images (post header image + auto-wrapped content images on list
+   pages): the theme's default crops to fill a fixed box via object-fit:cover,
+   centered. Show the whole image instead, anchored to the left. */
+.preview-img img {
+  object-fit: contain;
+  object-position: left;
+}
+
+/* Individual post content images: the theme centers popup image links by
+   default (position:relative; left:50%; transform:translateX(-50%)) unless
+   the markdown opts out with a .normal/.left/.right class. Our migrated
+   posts never set those classes, so every image was centering by default;
+   restore the un-centered (left-aligned) static position instead. */
+main p > a.popup:not(.normal):not(.left):not(.right) {
+  position: static;
+  left: auto;
+  transform: none;
+}
+
 /* Home page: full posts instead of Chirpy's default clamped-excerpt cards */
 
 #post-list {
