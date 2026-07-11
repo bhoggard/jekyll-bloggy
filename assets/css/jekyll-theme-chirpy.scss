@@ -132,3 +132,12 @@ main p > a.popup:not(.normal):not(.left):not(.right) {
     }
   }
 }
+
+/* Hide the dot separator between the theme-mode toggle and the contact icons.
+   Its width/margins are also what supplies that one gap's spacing (the gaps
+   between the icons themselves come from a separate margin-right rule on
+   each <a>), so keep the box and just make the dot invisible -- display:none
+   would collapse the gap and make spacing inconsistent. */
+#sidebar .sidebar-bottom .icon-border {
+  background: transparent;
+}
