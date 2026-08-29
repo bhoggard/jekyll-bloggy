@@ -44,10 +44,15 @@ Two repositories:
 
 At build time, a Node script in `bloggy` queries Sanity's dataset via
 GROQ for published posts, converts each one to a markdown file with
-Jekyll frontmatter, and writes it into `_posts/`. `jekyll build` then
-runs exactly as it does today and picks up the generated files like
-any other post — Jekyll and the Chirpy theme have no awareness that
-Sanity exists.
+Jekyll frontmatter, and writes it into `_posts/sanity/` — a
+subdirectory of `_posts/`. Jekyll reads posts recursively from
+subdirectories of `_posts/`, so `jekyll build` then runs exactly as it
+does today and picks up the generated files like any other post —
+Jekyll and the Chirpy theme have no awareness that Sanity exists.
+Keeping generated posts in their own subdirectory means `.gitignore`
+can exclude exactly that directory (`_posts/sanity/`) without any risk
+of a pattern ever matching a real historical post file living directly
+in `_posts/`.
 
 Cloudflare Pages' build command changes from:
 ```
@@ -91,18 +96,16 @@ documents, so this requires no extra filtering logic.
   Text HTML serializer (e.g. `@portabletext/to-html`). Inline images
   render as `<img>` tags pointing directly at Sanity's CDN image URLs
   — no image files are downloaded into this repo.
-- Writes one file per post to `_posts/YYYY-MM-DD-slug.md`, where the
-  date comes from `publishedAt` and the slug from the `slug` field,
-  matching the existing filename convention. Frontmatter is written in
-  the same shape existing posts already use (`title`, `date`,
-  `categories`).
-- Runs unconditionally on every build. The files it generates are
-  build output, not source — they should not be committed, and if it
-  writes into `_posts/` during local dev (`tools/run.sh`), those
-  generated files should be gitignored. This won't collide with
-  historical posts, since Sanity-sourced filenames are always new, but
-  the exact dev-time convention still needs to be settled — see Open
-  Questions.
+- Writes one file per post to `_posts/sanity/YYYY-MM-DD-slug.md`,
+  where the date comes from `publishedAt` and the slug from the
+  `slug` field, matching the existing filename convention. Frontmatter
+  is written in the same shape existing posts already use (`title`,
+  `date`, `categories`).
+- Runs unconditionally on every build, including local dev
+  (`tools/run.sh`). The files it generates are build output, not
+  source, so `_posts/sanity/` is added to `.gitignore` — generated
+  posts never get committed, whether produced locally or during a
+  Cloudflare Pages build.
 
 ## Error handling
 
@@ -127,9 +130,6 @@ documents, so this requires no extra filtering logic.
 
 ## Open questions for the implementation plan
 
-- Exact filename/gitignore handling for locally-generated posts during
-  `tools/run.sh` (so dev runs don't accidentally leave generated files
-  staged in git).
 - Whether `categories` in Studio should be a free-text array (matching
   history exactly) or a predefined list/enum to prevent typos
   diverging from the existing vocabulary — leaning free-text for
