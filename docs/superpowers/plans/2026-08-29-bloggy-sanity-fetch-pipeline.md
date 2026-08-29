@@ -43,11 +43,14 @@ Add this line under the existing `# Jekyll cache` block (or its own small block)
 ```
 # Sanity-sourced posts (regenerated on every build, never committed)
 _posts/sanity/
+
+# pnpm lockfile (matches existing package-lock.json exclusion)
+pnpm-lock.yaml
 ```
 
 - [ ] **Step 2: Pin Node in `mise.toml`**
 
-Edit `mise.toml` to add a `node` pin alongside the existing `ruby` pin:
+Edit `mise.toml` to add a `node` pin alongside the existing `ruby` pin (pnpm ships via Node's bundled corepack, so no separate `pnpm` mise entry is needed):
 
 ```toml
 [tools]
@@ -72,10 +75,10 @@ node = "24.13.0"
 - [ ] **Step 4: Install dependencies**
 
 ```bash
-npm install @sanity/client @sanity/image-url @portabletext/to-html
+pnpm add @sanity/client @sanity/image-url @portabletext/to-html
 ```
 
-Expected: `package.json` now has a `dependencies` block with these three packages; `node_modules/` and `package-lock.json` are created but stay gitignored (already covered by the existing `.gitignore` entries).
+Expected: `package.json` now has a `dependencies` block with these three packages; `node_modules/` and `pnpm-lock.yaml` are created but stay gitignored (per Step 1).
 
 - [ ] **Step 5: Create `scripts/sanity-config.js`**
 
@@ -86,7 +89,7 @@ export const SANITY_PROJECT_ID = 'REPLACE_WITH_PROJECT_ID'
 export const SANITY_DATASET = 'production'
 ```
 
-Open `../bloggy-studio/README.md` (from Plan 1, Task 5) and replace `REPLACE_WITH_PROJECT_ID` above with the real project ID recorded there.
+Open `/Users/barry/code/sanity/bloggy-studio/README.md` (from Plan 1, Task 5) and replace `REPLACE_WITH_PROJECT_ID` above with the real project ID recorded there.
 
 - [ ] **Step 6: Verify the packages import cleanly**
 
@@ -101,11 +104,11 @@ Expected: all three print their "ok" message with no errors.
 - [ ] **Step 7: Commit**
 
 ```bash
-git add package.json package-lock.json .gitignore mise.toml scripts/sanity-config.js
+git add package.json .gitignore mise.toml scripts/sanity-config.js
 git status
 ```
 
-Check the `git status`/`git add` output — if `package-lock.json` is listed as ignored (it is, per the existing `.gitignore`), that's expected; don't force-add it.
+Check the `git status` output — `pnpm-lock.yaml` and `node_modules/` should be listed as ignored (per Step 1), not staged; don't force-add them.
 
 ```bash
 git commit -m "Add Node tooling scaffolding for Sanity fetch pipeline"

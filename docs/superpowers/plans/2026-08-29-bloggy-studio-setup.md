@@ -4,9 +4,9 @@
 
 **Goal:** Stand up a new, deployed Sanity Studio project (in a new `bloggy-studio` repo) with a `post` schema, ready to be queried by the bloggy fetch pipeline (a separate follow-up plan).
 
-**Architecture:** A standalone Sanity Studio (TypeScript, scaffolded via `npm create sanity@latest`) with one custom document type, `post`. The dataset is public-read so the bloggy repo's build script can query it without an API token. No custom backend — Sanity's hosted API and Studio hosting (`*.sanity.studio`) are the entire infrastructure.
+**Architecture:** A standalone Sanity Studio (TypeScript, scaffolded via `pnpm create sanity@latest`) with one custom document type, `post`. The dataset is public-read so the bloggy repo's build script can query it without an API token. No custom backend — Sanity's hosted API and Studio hosting (`*.sanity.studio`) are the entire infrastructure.
 
-**Tech Stack:** Sanity Studio (`sanity` npm package, current stable major), TypeScript, Node (pinned via mise, matching bloggy's version-pinning convention).
+**Tech Stack:** Sanity Studio (`sanity` npm package, current stable major), TypeScript, Node + pnpm (pinned via mise, matching bloggy's version-pinning convention).
 
 **Spec:** `docs/superpowers/specs/2026-08-29-sanity-cms-for-new-posts-design.md`
 
@@ -27,25 +27,25 @@
 
 **Files:**
 - Create: new GitHub repo `bhoggard/bloggy-studio`
-- Create: entire scaffolded Studio project tree (via `npm create sanity@latest`), including `sanity.config.ts`, `schemaTypes/`, `package.json`, `tsconfig.json`
+- Create: entire scaffolded Studio project tree (via `pnpm create sanity@latest`), including `sanity.config.ts`, `schemaTypes/`, `package.json`, `tsconfig.json`
 
 **Interfaces:**
-- Produces: a working local Studio project directory at `~/code/jekyll/bloggy-studio` (sibling to `bloggy`) with a real Sanity `projectId` already filled into `sanity.config.ts` by the scaffolder, and a `production` dataset created.
+- Produces: a working local Studio project directory at `/Users/barry/code/sanity/bloggy-studio` with a real Sanity `projectId` already filled into `sanity.config.ts` by the scaffolder, and a `production` dataset created.
 
 - [ ] **Step 1: Create the GitHub repo**
 
 ```bash
-cd /Users/barry/code/jekyll
-gh repo create bhoggard/bloggy-studio --private --clone
+cd /Users/barry/code/sanity
+gh repo create bhoggard/bloggy-studio --public --clone
 cd bloggy-studio
 ```
 
-Expected: a new empty private repo, cloned locally to `/Users/barry/code/jekyll/bloggy-studio`. (Flip to public later with `gh repo edit --visibility public` if you'd rather it be open.)
+Expected: a new empty public repo, cloned locally to `/Users/barry/code/sanity/bloggy-studio`.
 
 - [ ] **Step 2: Log in to Sanity**
 
 ```bash
-npx sanity login
+pnpm dlx sanity login
 ```
 
 This opens a browser to authenticate (or create a free Sanity account if you don't have one). Wait for "Login successful" in the terminal before continuing.
@@ -53,7 +53,7 @@ This opens a browser to authenticate (or create a free Sanity account if you don
 - [ ] **Step 3: Scaffold the Studio**
 
 ```bash
-npm create sanity@latest -- --output-path .
+pnpm create sanity@latest -- --output-path .
 ```
 
 Answer the prompts:
@@ -62,7 +62,7 @@ Answer the prompts:
 - "Project output path" → `.` (current directory, already set by the flag, just confirm)
 - "Select project template" → **Clean project with no predefined schema types**
 - "Do you want to use TypeScript?" → **Yes**
-- "Package manager" → npm
+- "Package manager" → pnpm
 - Do **not** let it run `sanity deploy` yet if asked — that's Task 4.
 
 Expected: a full Studio project written into the current directory, with `sanity.config.ts` containing a real `projectId` (copy this value somewhere — you'll need it in Task 5).
@@ -70,7 +70,7 @@ Expected: a full Studio project written into the current directory, with `sanity
 - [ ] **Step 4: Verify it runs**
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Expected: starts a local dev server (typically `http://localhost:3333`); open it in a browser and confirm the empty Studio loads with no errors in the console. Stop the server (Ctrl-C) once confirmed.
@@ -207,8 +207,8 @@ Leave the rest of the scaffolded file (`projectId`, `dataset`, `plugins`) untouc
 - [ ] **Step 3: Verify the schema builds**
 
 ```bash
-npx tsc --noEmit
-npx sanity build
+pnpm exec tsc --noEmit
+pnpm exec sanity build
 ```
 
 Expected: both commands exit 0 with no type errors and no schema errors.
@@ -216,7 +216,7 @@ Expected: both commands exit 0 with no type errors and no schema errors.
 - [ ] **Step 4: Verify in the Studio UI**
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Open the local Studio, click "Post" in the document type list, click "Create new". Confirm all five fields appear (Title, Slug, Published at, Categories with the 21-value dropdown, Body with the rich-text toolbar). Don't save anything yet. Stop the server.
@@ -242,13 +242,13 @@ git push
 - [ ] **Step 1: Set visibility to public**
 
 ```bash
-npx sanity dataset visibility set production public
+pnpm exec sanity dataset visibility set production public
 ```
 
 - [ ] **Step 2: Verify**
 
 ```bash
-npx sanity dataset visibility get production
+pnpm exec sanity dataset visibility get production
 ```
 
 Expected output: `public`
@@ -275,7 +275,7 @@ No commit needed — this is a Sanity project setting, not a file change.
 - [ ] **Step 1: Deploy**
 
 ```bash
-npx sanity deploy
+pnpm exec sanity deploy
 ```
 
 When prompted for a studio hostname, use `bloggy-studio` (giving `https://bloggy-studio.sanity.studio`) unless that's taken, in which case pick an available variant and note the actual URL you get.
@@ -310,8 +310,8 @@ Sanity Studio for authoring new posts on [bloggy](https://github.com/bhoggard/bl
 ## Local development
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ## Schema
