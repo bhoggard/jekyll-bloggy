@@ -96,12 +96,13 @@ documents, so this requires no extra filtering logic.
   matching the existing filename convention. Frontmatter is written in
   the same shape existing posts already use (`title`, `date`,
   `categories`).
-- Runs unconditionally on every build; is not itself committed output
-  and should be gitignored if it writes into `_posts/` locally during
-  dev (existing historical files are unaffected either way since
-  filenames for Sanity-sourced posts are new and won't collide with
-  historical ones, but this needs a dev-time convention — see Open
-  Questions).
+- Runs unconditionally on every build. The files it generates are
+  build output, not source — they should not be committed, and if it
+  writes into `_posts/` during local dev (`tools/run.sh`), those
+  generated files should be gitignored. This won't collide with
+  historical posts, since Sanity-sourced filenames are always new, but
+  the exact dev-time convention still needs to be settled — see Open
+  Questions.
 
 ## Error handling
 
