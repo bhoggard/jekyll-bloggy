@@ -82,8 +82,17 @@ committed to the `bloggy` repo.
 | `title` | `string` | |
 | `slug` | `slug` (source: `title`) | Becomes both the generated filename slug and the Jekyll permalink slug. `_config.yml` already defaults new posts to permalink pattern `/posts/:title/`, so no per-post permalink override is needed. |
 | `publishedAt` | `datetime` | Maps to frontmatter `date`. |
-| `categories` | array of `string` | Maps to frontmatter `categories`. Free-text strings (not references), matching the existing flat vocabulary (`Culture`, `Politics`, `Art`, `NYC`, etc.) already used across the site. |
+| `categories` | array of `string`, each constrained to a predefined list (`options.list`) | Maps to frontmatter `categories`. 1-to-many: a post can select multiple values from the list in Studio. Not free text — prevents typos/drift from the existing vocabulary. |
 | `body` | Portable Text (block content) | Supports inline images. Converted to HTML by the fetch script. |
+
+The `categories` predefined list uses the full existing vocabulary, so
+new posts stay consistent with historical categorization:
+
+```
+Art, Business, Culture, Cults, Food and Drink, General, Image, Linkage,
+Media, Middle East, Music, NYC, Politics, Postcard, Pretty, Queer,
+Technology, Theater, Travel, Video, War
+```
 
 Only documents that are published (i.e. not Sanity drafts) are fetched
 — Sanity's default query behavior already excludes `drafts.*`
@@ -127,10 +136,3 @@ documents, so this requires no extra filtering logic.
 - The fetch script should be exercisable locally against the real
   (public) dataset, so a local `bash tools/run.sh` shows Sanity-sourced
   posts during development too.
-
-## Open questions for the implementation plan
-
-- Whether `categories` in Studio should be a free-text array (matching
-  history exactly) or a predefined list/enum to prevent typos
-  diverging from the existing vocabulary — leaning free-text for
-  simplicity, to be confirmed during planning.
