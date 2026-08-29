@@ -93,15 +93,16 @@ git push
 - Modify: `sanity.config.ts` (register the schema)
 
 **Interfaces:**
-- Consumes: none (first schema type in the project)
-- Produces: a `post` document type with fields `title` (string), `slug` (slug), `publishedAt` (datetime), `categories` (array of string, predefined list, min 1), `body` (Portable Text array of `block` and `image`). These exact field names are what Plan 2's fetch script queries against.
+- Consumes: `@sanity/icons` (already a dependency of the scaffolded Studio; if `pnpm exec tsc --noEmit` in Step 3 fails on the icons import, run `pnpm add @sanity/icons` first)
+- Produces: a `post` document type with fields `title` (string), `slug` (slug), `publishedAt` (datetime), `categories` (array of string, predefined list, min 1), `body` (Portable Text array of `block` and `image`, images carry a nested `alt` string field). These exact field names are what Plan 2's fetch script queries against.
 
 - [ ] **Step 1: Write the schema**
 
 Create `schemaTypes/post.ts`:
 
 ```typescript
-import {defineType, defineField} from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity'
+import {DocumentTextIcon} from '@sanity/icons/DocumentText'
 
 const CATEGORY_OPTIONS = [
   'Art',
@@ -131,6 +132,7 @@ export const postType = defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon: DocumentTextIcon,
   fields: [
     defineField({
       name: 'title',
@@ -155,7 +157,7 @@ export const postType = defineType({
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [defineArrayMember({type: 'string'})],
       options: {
         list: CATEGORY_OPTIONS.map((value) => ({title: value, value})),
       },
@@ -165,7 +167,21 @@ export const postType = defineType({
       name: 'body',
       title: 'Body',
       type: 'array',
-      of: [{type: 'block'}, {type: 'image', options: {hotspot: true}}],
+      of: [
+        defineArrayMember({type: 'block'}),
+        defineArrayMember({
+          type: 'image',
+          options: {hotspot: true},
+          fields: [
+            defineField({
+              name: 'alt',
+              title: 'Alternative text',
+              type: 'string',
+              validation: (Rule) => Rule.required().warning('Alt text is important for SEO'),
+            }),
+          ],
+        }),
+      ],
       validation: (Rule) => Rule.required(),
     }),
   ],
@@ -219,7 +235,7 @@ Expected: both commands exit 0 with no type errors and no schema errors.
 pnpm dev
 ```
 
-Open the local Studio, click "Post" in the document type list, click "Create new". Confirm all five fields appear (Title, Slug, Published at, Categories with the 21-value dropdown, Body with the rich-text toolbar). Don't save anything yet. Stop the server.
+Open the local Studio, confirm "Post" appears in the document type list with a document icon, and click "Create new". Confirm all five fields appear (Title, Slug, Published at, Categories with the 21-value dropdown, Body with the rich-text toolbar). In the Body field's toolbar, insert an image block and confirm it prompts for an "Alternative text" field alongside the image upload. Don't save anything yet. Stop the server.
 
 - [ ] **Step 5: Commit**
 
