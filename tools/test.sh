@@ -56,6 +56,10 @@ main() {
 
   read_baseurl
 
+  # fetch Sanity-sourced posts (regenerates _posts/sanity/ so html-proofer
+  # validates combined historical + Sanity-sourced output)
+  node scripts/fetch-sanity-posts.js
+
   # build
   JEKYLL_ENV=production bundle exec jekyll b \
     -d "$SITE_DIR$_baseurl" -c "$_config"

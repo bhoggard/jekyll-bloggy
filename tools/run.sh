@@ -50,5 +50,7 @@ if [ -e /proc/1/cgroup ] && grep -q docker /proc/1/cgroup; then
   command="$command --force_polling"
 fi
 
+node scripts/fetch-sanity-posts.js || exit 1
+
 echo -e "\n> $command\n"
 eval "$command"
