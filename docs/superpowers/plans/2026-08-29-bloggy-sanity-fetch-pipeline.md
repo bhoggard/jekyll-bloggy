@@ -22,7 +22,7 @@
 - A malformed individual document (e.g. missing `slug`) is skipped with a logged warning — it must not fail the whole build (spec: Error handling).
 - A Sanity post whose slug collides with a historical post's slug is skipped with a logged warning, same as any other malformed document — both share Jekyll's `/posts/:title/` permalink namespace, so a silent collision would mean two pages competing for one URL (finding from Plan 1's final review, carried forward here).
 - The Sanity project ID and dataset name are non-secret and safe to commit directly — no API token or Cloudflare Pages secret is needed for reads (spec: Architecture).
-- Cloudflare Pages' build command becomes `node scripts/fetch-sanity-posts.js && bundle exec jekyll build` (spec: Architecture).
+- Cloudflare Pages' build command gets the fetch step prepended, preserving the rest of the existing command as-is: the actual live command at execution time was `bundle install && JEKYLL_ENV=production bundle exec jekyll build` (not the simpler form originally assumed here), so it became `node scripts/fetch-sanity-posts.js && bundle install && JEKYLL_ENV=production bundle exec jekyll build` (spec: Architecture; corrected against the real Cloudflare Pages config during Task 6).
 
 ---
 
@@ -617,13 +617,13 @@ Using the `mcp__cloudflare-api` tool (already authenticated to this account), up
 mcp__cloudflare-api__docs query: "Pages project update build configuration"
 ```
 
-Then send the update — the Cloudflare Pages API shape is:
+Then GET the project first to read its actual current `build_config.build_command` — do not assume it matches this plan's earlier draft. Send the update preserving everything in that command except prepending the fetch step:
 
 ```
 PATCH /accounts/{account_id}/pages/projects/bloggy
 {
   "build_config": {
-    "build_command": "node scripts/fetch-sanity-posts.js && bundle exec jekyll build"
+    "build_command": "node scripts/fetch-sanity-posts.js && <rest of the real current build command, unchanged>"
   }
 }
 ```
@@ -632,7 +632,7 @@ Use `mcp__cloudflare-api__execute` to issue this request (look up the account ID
 
 - [ ] **Step 2: Verify**
 
-Use `mcp__cloudflare-api__execute` to GET the project (`GET /accounts/{account_id}/pages/projects/bloggy`) and confirm `build_config.build_command` now reads `node scripts/fetch-sanity-posts.js && bundle exec jekyll build`.
+Use `mcp__cloudflare-api__execute` to GET the project (`GET /accounts/{account_id}/pages/projects/bloggy`) and confirm `build_config.build_command` now starts with `node scripts/fetch-sanity-posts.js && ` followed by the unchanged rest of the original command.
 
 - [ ] **Step 3: Trigger and watch a deploy**
 
