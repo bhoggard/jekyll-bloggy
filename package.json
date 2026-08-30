@@ -1,0 +1,14 @@
+{
+  "name": "bloggy-sanity-fetch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch-posts": "node scripts/fetch-sanity-posts.js",
+    "test": "node --test scripts/lib/*.test.js"
+  },
+  "dependencies": {
+    "@portabletext/to-html": "^6.0.0",
+    "@sanity/client": "^8.4.0",
+    "@sanity/image-url": "^2.1.1"
+  }
+}

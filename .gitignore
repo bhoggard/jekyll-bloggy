@@ -8,6 +8,12 @@ Gemfile.lock
 .jekyll-metadata
 _site
 
+# Sanity-sourced posts (regenerated on every build, never committed)
+_posts/sanity/
+
+# pnpm lockfile (matches existing package-lock.json exclusion)
+pnpm-lock.yaml
+
 # RubyGems
 *.gem
 
