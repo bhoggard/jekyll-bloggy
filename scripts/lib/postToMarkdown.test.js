@@ -34,7 +34,13 @@ test('writes frontmatter with title, date, and categories', () => {
   assert.match(content, /^---\n/)
   assert.match(content, /title: "My New Post"/)
   assert.match(content, /date: 2026-08-29 12:34:56 \+0000/)
-  assert.match(content, /categories: \[Art, NYC\]/)
+  assert.match(content, /categories: \["Art", "NYC"\]/)
+})
+
+test('safely quotes categories containing special characters', () => {
+  const post = {...basePost, categories: ['Film: Reviews', 'Art [NYC]']}
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /categories: \["Film: Reviews", "Art \[NYC\]"\]/)
 })
 
 test('converts a paragraph block to HTML', () => {

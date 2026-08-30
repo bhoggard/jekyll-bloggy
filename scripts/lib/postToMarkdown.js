@@ -18,7 +18,7 @@ export function postToMarkdown(post, config) {
     '---',
     `title: ${JSON.stringify(post.title || '')}`,
     `date: ${formatDate(date)}`,
-    `categories: [${categories.join(', ')}]`,
+    `categories: [${categories.map((c) => JSON.stringify(c)).join(', ')}]`,
     '---',
     '',
   ].join('\n')
