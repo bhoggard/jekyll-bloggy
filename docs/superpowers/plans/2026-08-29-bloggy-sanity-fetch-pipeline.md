@@ -20,7 +20,9 @@
 - Generated posts live only in `_posts/sanity/`, which is gitignored — never committed, whether generated locally or during a Cloudflare Pages build (spec: Pre-build script).
 - If the Sanity fetch itself fails (network/query error), the whole build must fail loudly (nonzero exit) rather than silently produce a site missing new posts (spec: Error handling).
 - A malformed individual document (e.g. missing `slug`) is skipped with a logged warning — it must not fail the whole build (spec: Error handling).
-- A Sanity post whose slug collides with a historical post's slug is skipped with a logged warning, same as any other malformed document — both share Jekyll's `/posts/:title/` permalink namespace, so a silent collision would mean two pages competing for one URL (finding from Plan 1's final review, carried forward here).
+- A Sanity post whose slug duplicates another Sanity post's slug within the same fetch batch is skipped with a logged warning, same as any other malformed document — Sanity's own schema has no slug-uniqueness validation, so two published documents could otherwise collide on the same Jekyll `/posts/:slug/` URL (corrected during Plan 2's own final whole-branch review — the guard originally targeted a collision with historical posts that turned out to be impossible, since every historical post carries an explicit `permalink:` override; see Task 3).
+- The Sanity client requests the `published` perspective explicitly (not just the implicit default), so drafts stay excluded even if a read token is ever added later (spec: Sanity schema; hardened during Plan 2's final review).
+- Category values are safely quoted (`JSON.stringify`) when interpolated into generated frontmatter YAML, not raw-joined — an unescaped category containing `[`, `]`, or `:` could otherwise break the Jekyll build or parse as the wrong YAML type (hardened during Plan 2's final review; see Task 2).
 - The Sanity project ID and dataset name are non-secret and safe to commit directly — no API token or Cloudflare Pages secret is needed for reads (spec: Architecture).
 - Cloudflare Pages' build command gets the fetch step prepended, preserving the rest of the existing command as-is: the actual live command at execution time was `bundle install && JEKYLL_ENV=production bundle exec jekyll build` (not the simpler form originally assumed here), so it became `node scripts/fetch-sanity-posts.js && bundle install && JEKYLL_ENV=production bundle exec jekyll build` (spec: Architecture; corrected against the real Cloudflare Pages config during Task 6).
 
@@ -168,7 +170,13 @@ test('writes frontmatter with title, date, and categories', () => {
   assert.match(content, /^---\n/)
   assert.match(content, /title: "My New Post"/)
   assert.match(content, /date: 2026-08-29 12:34:56 \+0000/)
-  assert.match(content, /categories: \[Art, NYC\]/)
+  assert.match(content, /categories: \["Art", "NYC"\]/)
+})
+
+test('safely quotes categories containing special characters', () => {
+  const post = {...basePost, categories: ['Film: Reviews', 'Art [NYC]']}
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /categories: \["Film: Reviews", "Art \[NYC\]"\]/)
 })
 
 test('converts a paragraph block to HTML', () => {
@@ -234,7 +242,7 @@ export function postToMarkdown(post, config) {
     '---',
     `title: ${JSON.stringify(post.title || '')}`,
     `date: ${formatDate(date)}`,
-    `categories: [${categories.join(', ')}]`,
+    `categories: [${categories.map((c) => JSON.stringify(c)).join(', ')}]`,
     '---',
     '',
   ].join('\n')
@@ -272,7 +280,7 @@ function escapeHtml(s) {
 - [ ] **Step 4: Run the tests to verify they pass**
 
 Run: `node --test scripts/lib/postToMarkdown.test.js`
-Expected: all 7 tests PASS.
+Expected: all 8 tests PASS.
 
 - [ ] **Step 5: Commit**
 
@@ -291,9 +299,9 @@ git commit -m "Add postToMarkdown: Portable Text post to Jekyll markdown"
 
 **Interfaces:**
 - Consumes: `postToMarkdown(post, config)` from Task 2
-- Produces: `processDocuments(docs, {config, writeFile, warn, existingSlugs}) => number` (count of posts written), consumed by Task 4's `fetch-sanity-posts.js`. `writeFile(filename, content)` and `warn(message)` are injected so this stays testable without real file I/O. `existingSlugs` is a `Set<string>` of slugs already used by historical posts in `_posts/` — Task 4 builds it by reading the historical post filenames.
+- Produces: `processDocuments(docs, {config, writeFile, warn}) => number` (count of posts written), consumed by Task 4's `fetch-sanity-posts.js`. `writeFile(filename, content)` and `warn(message)` are injected so this stays testable without real file I/O.
 
-This task also guards against a Sanity-sourced post's slug colliding with a historical post's permalink: Jekyll's default permalink pattern (`/posts/:title/`) is keyed on the slug alone, and Sanity's own slug-uniqueness check only covers the Sanity dataset, not the ~2,700 historical posts already in `_posts/`. A collision here is treated the same as any other malformed document — skipped with a warning, not a fatal error.
+**Post-review correction (Plan 2's own final whole-branch review):** an earlier version of this task guarded against a Sanity post's slug colliding with a historical post's Jekyll permalink. That guard was removed — it was built on a false premise. Every one of this repo's ~2,754 historical posts carries an explicit `permalink:` frontmatter override (e.g. `/2008/01/linkage-91.html`), so historical posts never actually use the default `/posts/:title/` pattern the guard assumed, and no real collision with history is possible. Worse, the guard was a live false-positive generator: a new post titled "Art" (slug `art`) would be silently skipped merely because `art` happened to already be a historical slug. The guard now protects against a real, previously-unguarded risk instead: Sanity's own schema has no slug-uniqueness validation, so two published Sanity documents could share a slug within the same fetch batch, both rendering at the same Jekyll `/posts/:slug/` URL. `processDocuments` now tracks slugs seen within its own run and skips a later duplicate, same treatment as any other malformed document.
 
 - [ ] **Step 1: Write the failing tests**
 
@@ -324,7 +332,6 @@ test('writes a file for each valid document', () => {
     config,
     writeFile: (filename, content) => written.push({filename, content}),
     warn: (message) => warnings.push(message),
-    existingSlugs: new Set(),
   })
 
   assert.equal(count, 2)
@@ -341,7 +348,6 @@ test('skips a malformed document with a warning instead of throwing', () => {
     config,
     writeFile: (filename, content) => written.push({filename, content}),
     warn: (message) => warnings.push(message),
-    existingSlugs: new Set(),
   })
 
   assert.equal(count, 1)
@@ -351,22 +357,20 @@ test('skips a malformed document with a warning instead of throwing', () => {
   assert.match(warnings[0], /missing a slug/)
 })
 
-test('skips a post whose slug collides with a historical post, with a warning', () => {
+test('skips a post whose slug duplicates an earlier post in the same batch', () => {
   const written = []
   const warnings = []
-  const count = processDocuments([textPost('a', 'post-a'), textPost('b', 'the-end-of-artcat-calendar')], {
+  const count = processDocuments([textPost('a', 'post-a'), textPost('b', 'post-a')], {
     config,
     writeFile: (filename, content) => written.push({filename, content}),
     warn: (message) => warnings.push(message),
-    existingSlugs: new Set(['the-end-of-artcat-calendar']),
   })
 
   assert.equal(count, 1)
   assert.equal(written.length, 1)
-  assert.equal(written[0].filename, '2026-08-29-post-a.md')
   assert.equal(warnings.length, 1)
   assert.match(warnings[0], /Skipping post/)
-  assert.match(warnings[0], /slug .* already used by a historical post/)
+  assert.match(warnings[0], /duplicate slug/)
 })
 ```
 
@@ -382,15 +386,17 @@ Create `scripts/lib/processDocuments.js`:
 ```javascript
 import {postToMarkdown} from './postToMarkdown.js'
 
-export function processDocuments(docs, {config, writeFile, warn, existingSlugs}) {
+export function processDocuments(docs, {config, writeFile, warn}) {
   let written = 0
+  const seenSlugs = new Set()
   for (const doc of docs) {
     try {
       const {filename, slug, content} = postToMarkdown(doc, config)
-      if (existingSlugs.has(slug)) {
-        throw new Error(`slug "${slug}" already used by a historical post`)
+      if (seenSlugs.has(slug)) {
+        throw new Error(`duplicate slug "${slug}" already used earlier in this batch`)
       }
       writeFile(filename, content)
+      seenSlugs.add(slug)
       written += 1
     } catch (err) {
       warn(`Skipping post (${doc._id || 'unknown id'}): ${err.message}`)
@@ -439,19 +445,7 @@ import {SANITY_PROJECT_ID, SANITY_DATASET} from './sanity-config.js'
 import {processDocuments} from './lib/processDocuments.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const POSTS_DIR = path.join(__dirname, '..', '_posts')
-const OUTPUT_DIR = path.join(POSTS_DIR, 'sanity')
-const HISTORICAL_FILENAME = /^\d{4}-\d{2}-\d{2}-(.+)\.md$/
-
-function loadHistoricalSlugs() {
-  const slugs = new Set()
-  for (const entry of fs.readdirSync(POSTS_DIR, {withFileTypes: true})) {
-    if (!entry.isFile()) continue
-    const match = HISTORICAL_FILENAME.exec(entry.name)
-    if (match) slugs.add(match[1])
-  }
-  return slugs
-}
+const OUTPUT_DIR = path.join(__dirname, '..', '_posts', 'sanity')
 
 async function main() {
   const client = createClient({
@@ -459,6 +453,7 @@ async function main() {
     dataset: SANITY_DATASET,
     apiVersion: '2024-01-01',
     useCdn: true,
+    perspective: 'published',
   })
 
   let docs
@@ -471,8 +466,6 @@ async function main() {
     process.exit(1)
   }
 
-  const existingSlugs = loadHistoricalSlugs()
-
   fs.rmSync(OUTPUT_DIR, {recursive: true, force: true})
   fs.mkdirSync(OUTPUT_DIR, {recursive: true})
 
@@ -481,7 +474,6 @@ async function main() {
     writeFile: (filename, content) =>
       fs.writeFileSync(path.join(OUTPUT_DIR, filename), content, 'utf8'),
     warn: (message) => console.warn(message),
-    existingSlugs,
   })
 
   console.log(`Wrote ${written} post(s) from Sanity to ${OUTPUT_DIR}`)
@@ -490,7 +482,7 @@ async function main() {
 main()
 ```
 
-Note: the output directory is cleared and rewritten on every run, so posts renamed or unpublished in Sanity don't leave stale files behind. `loadHistoricalSlugs` reads only the top level of `_posts/` (`fs.readdirSync` is non-recursive), so it naturally excludes `_posts/sanity/` itself — no special-casing needed.
+Note: the output directory is cleared and rewritten on every run, so posts renamed or unpublished in Sanity don't leave stale files behind. `perspective: 'published'` is explicit here rather than relying on the client's implicit default — at `apiVersion: '2024-01-01'` the default perspective is `raw` (includes drafts), and only the fact that this request is unauthenticated keeps drafts out today. Being explicit means the guarantee holds even if a read token is ever added later (post-review correction from Plan 2's final whole-branch review).
 
 - [ ] **Step 2: Run it against the live (Plan 1) dataset**
 
@@ -643,3 +635,11 @@ Push any pending commits from this plan to `main` (or trigger a manual deploy fr
 ## Done
 
 At this point, new posts written and published in the `bloggy-studio` Sanity Studio automatically appear on the live site on the next Cloudflare Pages build, alongside all untouched historical posts.
+
+## Post-review hardening (Plan 2's final whole-branch review)
+
+Three additional fixes applied after Task 6, not tied to one specific task above:
+
+- `_config.yml`'s `exclude:` list gained `scripts` (alongside the existing `tools` entry). Without it, Jekyll copied the entire Node pipeline — including test files — into `_site`, and Cloudflare served it publicly. Not a secret leak (the Sanity project ID is public by design), but the source had no business being a public asset.
+- `package-lock.json` is now committed (and removed from `.gitignore`; `pnpm-lock.yaml` stays ignored). Cloudflare's build actually installs dependencies with plain `npm install`, not pnpm — confirmed in production build logs — so without a committed npm lockfile, every deploy re-resolved the three dependencies' floating `^` version ranges fresh, with no guarantee two builds installed the same thing. Local development still uses pnpm as preferred; pnpm ignores `package-lock.json`.
+- `.node-version` was added at the repo root (containing `24.13.0`), matching the existing `.ruby-version` file's convention. `mise.toml`'s Node pin only affects local dev — Cloudflare Pages reads `.node-version`/`.tool-versions`/a `NODE_VERSION` env var, none of which existed, so production was running whatever Node version happened to be the build image's default.
