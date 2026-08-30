@@ -20,6 +20,7 @@
 - Generated posts live only in `_posts/sanity/`, which is gitignored — never committed, whether generated locally or during a Cloudflare Pages build (spec: Pre-build script).
 - If the Sanity fetch itself fails (network/query error), the whole build must fail loudly (nonzero exit) rather than silently produce a site missing new posts (spec: Error handling).
 - A malformed individual document (e.g. missing `slug`) is skipped with a logged warning — it must not fail the whole build (spec: Error handling).
+- A Sanity post whose slug collides with a historical post's slug is skipped with a logged warning, same as any other malformed document — both share Jekyll's `/posts/:title/` permalink namespace, so a silent collision would mean two pages competing for one URL (finding from Plan 1's final review, carried forward here).
 - The Sanity project ID and dataset name are non-secret and safe to commit directly — no API token or Cloudflare Pages secret is needed for reads (spec: Architecture).
 - Cloudflare Pages' build command becomes `node scripts/fetch-sanity-posts.js && bundle exec jekyll build` (spec: Architecture).
 
@@ -124,7 +125,7 @@ git commit -m "Add Node tooling scaffolding for Sanity fetch pipeline"
 
 **Interfaces:**
 - Consumes: `{projectId, dataset}` config shape (matches `SANITY_PROJECT_ID`/`SANITY_DATASET` from Task 1, but the function itself takes a plain object so it stays network-free and unit-testable)
-- Produces: `postToMarkdown(post, config) => {filename: string, content: string}`, consumed by Task 3's `processDocuments`. Throws `Error` on a post missing `slug` or `publishedAt`.
+- Produces: `postToMarkdown(post, config) => {filename: string, slug: string, content: string}`, consumed by Task 3's `processDocuments`. Throws `Error` on a post missing `slug` or `publishedAt`.
 
 - [ ] **Step 1: Write the failing tests**
 
@@ -155,6 +156,11 @@ const basePost = {
 test('generates a filename from date and slug', () => {
   const {filename} = postToMarkdown(basePost, config)
   assert.equal(filename, '2026-08-29-my-new-post.md')
+})
+
+test('returns the raw slug alongside the filename', () => {
+  const {slug} = postToMarkdown(basePost, config)
+  assert.equal(slug, 'my-new-post')
 })
 
 test('writes frontmatter with title, date, and categories', () => {
@@ -235,7 +241,7 @@ export function postToMarkdown(post, config) {
 
   const html = bodyToHtml(post.body || [], config)
 
-  return {filename, content: `${frontmatter}${html}\n`}
+  return {filename, slug: post.slug, content: `${frontmatter}${html}\n`}
 }
 
 function formatDate(date) {
@@ -285,7 +291,9 @@ git commit -m "Add postToMarkdown: Portable Text post to Jekyll markdown"
 
 **Interfaces:**
 - Consumes: `postToMarkdown(post, config)` from Task 2
-- Produces: `processDocuments(docs, {config, writeFile, warn}) => number` (count of posts written), consumed by Task 4's `fetch-sanity-posts.js`. `writeFile(filename, content)` and `warn(message)` are injected so this stays testable without real file I/O.
+- Produces: `processDocuments(docs, {config, writeFile, warn, existingSlugs}) => number` (count of posts written), consumed by Task 4's `fetch-sanity-posts.js`. `writeFile(filename, content)` and `warn(message)` are injected so this stays testable without real file I/O. `existingSlugs` is a `Set<string>` of slugs already used by historical posts in `_posts/` — Task 4 builds it by reading the historical post filenames.
+
+This task also guards against a Sanity-sourced post's slug colliding with a historical post's permalink: Jekyll's default permalink pattern (`/posts/:title/`) is keyed on the slug alone, and Sanity's own slug-uniqueness check only covers the Sanity dataset, not the ~2,700 historical posts already in `_posts/`. A collision here is treated the same as any other malformed document — skipped with a warning, not a fatal error.
 
 - [ ] **Step 1: Write the failing tests**
 
@@ -316,6 +324,7 @@ test('writes a file for each valid document', () => {
     config,
     writeFile: (filename, content) => written.push({filename, content}),
     warn: (message) => warnings.push(message),
+    existingSlugs: new Set(),
   })
 
   assert.equal(count, 2)
@@ -332,6 +341,7 @@ test('skips a malformed document with a warning instead of throwing', () => {
     config,
     writeFile: (filename, content) => written.push({filename, content}),
     warn: (message) => warnings.push(message),
+    existingSlugs: new Set(),
   })
 
   assert.equal(count, 1)
@@ -339,6 +349,24 @@ test('skips a malformed document with a warning instead of throwing', () => {
   assert.equal(warnings.length, 1)
   assert.match(warnings[0], /Skipping post/)
   assert.match(warnings[0], /missing a slug/)
+})
+
+test('skips a post whose slug collides with a historical post, with a warning', () => {
+  const written = []
+  const warnings = []
+  const count = processDocuments([textPost('a', 'post-a'), textPost('b', 'the-end-of-artcat-calendar')], {
+    config,
+    writeFile: (filename, content) => written.push({filename, content}),
+    warn: (message) => warnings.push(message),
+    existingSlugs: new Set(['the-end-of-artcat-calendar']),
+  })
+
+  assert.equal(count, 1)
+  assert.equal(written.length, 1)
+  assert.equal(written[0].filename, '2026-08-29-post-a.md')
+  assert.equal(warnings.length, 1)
+  assert.match(warnings[0], /Skipping post/)
+  assert.match(warnings[0], /slug .* already used by a historical post/)
 })
 ```
 
@@ -354,11 +382,14 @@ Create `scripts/lib/processDocuments.js`:
 ```javascript
 import {postToMarkdown} from './postToMarkdown.js'
 
-export function processDocuments(docs, {config, writeFile, warn}) {
+export function processDocuments(docs, {config, writeFile, warn, existingSlugs}) {
   let written = 0
   for (const doc of docs) {
     try {
-      const {filename, content} = postToMarkdown(doc, config)
+      const {filename, slug, content} = postToMarkdown(doc, config)
+      if (existingSlugs.has(slug)) {
+        throw new Error(`slug "${slug}" already used by a historical post`)
+      }
       writeFile(filename, content)
       written += 1
     } catch (err) {
@@ -372,7 +403,7 @@ export function processDocuments(docs, {config, writeFile, warn}) {
 - [ ] **Step 4: Run the tests to verify they pass**
 
 Run: `node --test scripts/lib/processDocuments.test.js`
-Expected: both tests PASS.
+Expected: all 3 tests PASS.
 
 - [ ] **Step 5: Commit**
 
@@ -408,7 +439,19 @@ import {SANITY_PROJECT_ID, SANITY_DATASET} from './sanity-config.js'
 import {processDocuments} from './lib/processDocuments.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const OUTPUT_DIR = path.join(__dirname, '..', '_posts', 'sanity')
+const POSTS_DIR = path.join(__dirname, '..', '_posts')
+const OUTPUT_DIR = path.join(POSTS_DIR, 'sanity')
+const HISTORICAL_FILENAME = /^\d{4}-\d{2}-\d{2}-(.+)\.md$/
+
+function loadHistoricalSlugs() {
+  const slugs = new Set()
+  for (const entry of fs.readdirSync(POSTS_DIR, {withFileTypes: true})) {
+    if (!entry.isFile()) continue
+    const match = HISTORICAL_FILENAME.exec(entry.name)
+    if (match) slugs.add(match[1])
+  }
+  return slugs
+}
 
 async function main() {
   const client = createClient({
@@ -428,6 +471,8 @@ async function main() {
     process.exit(1)
   }
 
+  const existingSlugs = loadHistoricalSlugs()
+
   fs.rmSync(OUTPUT_DIR, {recursive: true, force: true})
   fs.mkdirSync(OUTPUT_DIR, {recursive: true})
 
@@ -436,6 +481,7 @@ async function main() {
     writeFile: (filename, content) =>
       fs.writeFileSync(path.join(OUTPUT_DIR, filename), content, 'utf8'),
     warn: (message) => console.warn(message),
+    existingSlugs,
   })
 
   console.log(`Wrote ${written} post(s) from Sanity to ${OUTPUT_DIR}`)
@@ -444,7 +490,7 @@ async function main() {
 main()
 ```
 
-Note: the output directory is cleared and rewritten on every run, so posts renamed or unpublished in Sanity don't leave stale files behind.
+Note: the output directory is cleared and rewritten on every run, so posts renamed or unpublished in Sanity don't leave stale files behind. `loadHistoricalSlugs` reads only the top level of `_posts/` (`fs.readdirSync` is non-recursive), so it naturally excludes `_posts/sanity/` itself — no special-casing needed.
 
 - [ ] **Step 2: Run it against the live (Plan 1) dataset**
 
