@@ -94,6 +94,24 @@ test('renders a Vimeo URL as a responsive embed iframe', () => {
   assert.match(content, /allowfullscreen/)
 })
 
+test('preserves the privacy hash from a Vimeo share URL (required for unlisted videos)', () => {
+  const post = {
+    ...basePost,
+    body: [
+      {
+        _type: 'videoEmbed',
+        _key: 'v1',
+        url: 'https://vimeo.com/1142994458/e5d9f831e9?share=copy&fl=cl&fe=ci',
+      },
+    ],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(
+    content,
+    /<iframe class="embed-video" src="https:\/\/player\.vimeo\.com\/video\/1142994458\?h=e5d9f831e9"/
+  )
+})
+
 test('throws on a video URL that is neither YouTube nor Vimeo', () => {
   const post = {
     ...basePost,

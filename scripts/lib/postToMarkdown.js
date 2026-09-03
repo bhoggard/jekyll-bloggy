@@ -55,9 +55,9 @@ function videoEmbedToHtml(url) {
     return `<iframe class="embed-video" src="https://www.youtube.com/embed/${youtubeId}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   }
 
-  const vimeoId = extractVimeoId(url)
-  if (vimeoId) {
-    return `<iframe class="embed-video" src="https://player.vimeo.com/video/${vimeoId}" title="Vimeo video player" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
+  const vimeoSrc = extractVimeoSrc(url)
+  if (vimeoSrc) {
+    return `<iframe class="embed-video" src="${vimeoSrc}" title="Vimeo video player" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
   }
 
   throw new Error(`Unrecognized video URL (expected YouTube or Vimeo): ${url}`)
@@ -68,9 +68,19 @@ function extractYouTubeId(url) {
   return match ? match[1] : null
 }
 
-function extractVimeoId(url) {
-  const match = url.match(/vimeo\.com\/(?:video\/|channels\/[^/]+\/)?(\d+)/)
-  return match ? match[1] : null
+function extractVimeoSrc(url) {
+  const idMatch = url.match(/vimeo\.com\/(?:video\/|channels\/[^/]+\/)?(\d+)/)
+  if (!idMatch) return null
+  const id = idMatch[1]
+
+  // Unlisted/private Vimeo videos require a privacy hash to embed (without it,
+  // player.vimeo.com returns a 403). The hash shows up either as a path segment
+  // in "share" URLs (vimeo.com/ID/HASH) or as a ?h= query param on embed URLs.
+  const pathHashMatch = url.match(new RegExp(`${id}\\/([a-zA-Z0-9]+)`))
+  const queryHashMatch = url.match(/[?&]h=([a-zA-Z0-9]+)/)
+  const hash = (pathHashMatch && pathHashMatch[1]) || (queryHashMatch && queryHashMatch[1])
+
+  return hash ? `https://player.vimeo.com/video/${id}?h=${hash}` : `https://player.vimeo.com/video/${id}`
 }
 
 function escapeHtml(s) {
