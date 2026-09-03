@@ -65,6 +65,43 @@ test('renders an inline image as an <img> tag pointing at the Sanity CDN', () =>
   assert.match(content, /alt="A photo"/)
 })
 
+test('renders a YouTube URL as a responsive embed iframe', () => {
+  const post = {
+    ...basePost,
+    body: [{_type: 'videoEmbed', _key: 'v1', url: 'https://www.youtube.com/watch?v=qo3q-MKvEjA'}],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /<iframe class="embed-video" src="https:\/\/www\.youtube\.com\/embed\/qo3q-MKvEjA"/)
+  assert.match(content, /allowfullscreen/)
+})
+
+test('renders a youtu.be short URL as a responsive embed iframe', () => {
+  const post = {
+    ...basePost,
+    body: [{_type: 'videoEmbed', _key: 'v1', url: 'https://youtu.be/qo3q-MKvEjA'}],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /src="https:\/\/www\.youtube\.com\/embed\/qo3q-MKvEjA"/)
+})
+
+test('renders a Vimeo URL as a responsive embed iframe', () => {
+  const post = {
+    ...basePost,
+    body: [{_type: 'videoEmbed', _key: 'v1', url: 'https://vimeo.com/76979871'}],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /<iframe class="embed-video" src="https:\/\/player\.vimeo\.com\/video\/76979871"/)
+  assert.match(content, /allowfullscreen/)
+})
+
+test('throws on a video URL that is neither YouTube nor Vimeo', () => {
+  const post = {
+    ...basePost,
+    body: [{_type: 'videoEmbed', _key: 'v1', url: 'https://example.com/watch?v=123'}],
+  }
+  assert.throws(() => postToMarkdown(post, config), /Unrecognized video URL/)
+})
+
 test('throws when slug is missing', () => {
   const post = {...basePost, slug: undefined}
   assert.throws(() => postToMarkdown(post, config), /missing a slug/)

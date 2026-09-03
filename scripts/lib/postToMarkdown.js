@@ -43,9 +43,34 @@ function bodyToHtml(body, config) {
       types: {
         image: ({value}) =>
           `<img src="${builder.image(value).width(1200).fit('max').url()}" alt="${escapeHtml(value.alt || '')}" />`,
+        videoEmbed: ({value}) => videoEmbedToHtml(value.url || ''),
       },
     },
   })
+}
+
+function videoEmbedToHtml(url) {
+  const youtubeId = extractYouTubeId(url)
+  if (youtubeId) {
+    return `<iframe class="embed-video" src="https://www.youtube.com/embed/${youtubeId}" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+  }
+
+  const vimeoId = extractVimeoId(url)
+  if (vimeoId) {
+    return `<iframe class="embed-video" src="https://player.vimeo.com/video/${vimeoId}" title="Vimeo video player" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
+  }
+
+  throw new Error(`Unrecognized video URL (expected YouTube or Vimeo): ${url}`)
+}
+
+function extractYouTubeId(url) {
+  const match = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/)
+  return match ? match[1] : null
+}
+
+function extractVimeoId(url) {
+  const match = url.match(/vimeo\.com\/(?:video\/|channels\/[^/]+\/)?(\d+)/)
+  return match ? match[1] : null
 }
 
 function escapeHtml(s) {
