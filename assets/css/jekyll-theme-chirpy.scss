@@ -8,6 +8,7 @@
 {%- endif -%}
 ';
 @use 'abstracts/breakpoints' as bp;
+@use 'sass:color';
 
 /* append your custom style below */
 
@@ -140,4 +141,70 @@ main p > a.popup:not(.normal):not(.left):not(.right) {
    would collapse the gap and make spacing inconsistent. */
 #sidebar .sidebar-bottom .icon-border {
   background: transparent;
+}
+
+/* Buttondown subscribe form, in the sidebar just below the nav links (after
+   About, the last tab). The sidebar is a narrow fixed-width column (260px,
+   300px at >=1650px, see $sidebar-width in the theme), so this is sized
+   compactly rather than reusing typical full-width form styling. Chirpy
+   doesn't style form elements itself, so colors come from the theme's CSS
+   variables to stay correct in both light and dark mode. */
+.sidebar-subscribe {
+  padding: 0.75rem 1.5rem;
+  /* The nav list above is flex-grow-1, so it stretches to fill the sidebar's
+     remaining height and pushes this form flush against the bottom icons --
+     all the visible space between "About" (the last link) and the form is
+     nav's own empty flex-grown space, not padding here. Pull the form up by
+     one nav-link's rendered height (measured in-browser: 40.78px ~= 2.55rem)
+     to close that much of the gap, and hand that same amount back below the
+     form so the icons keep their distance. */
+  margin-top: -2.55rem;
+  margin-bottom: 2.55rem;
+}
+
+.embeddable-buttondown-form {
+  font-size: 0.85rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+
+  input[type='email'] {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    background: var(--main-bg);
+    border: 1px solid var(--main-border-color);
+    border-radius: 0.375rem;
+  }
+
+  input[type='submit'] {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+    color: #fff;
+    cursor: pointer;
+    background: #bd2408;
+    border: 0;
+    border-radius: 0.375rem;
+
+    &:hover {
+      background: color.adjust(#bd2408, $lightness: -8%);
+    }
+  }
+
+  p {
+    margin: 0.5rem 0 0;
+    font-size: 0.7rem;
+    color: var(--text-muted-color);
+
+    a {
+      color: inherit;
+    }
+  }
 }
