@@ -38,15 +38,44 @@ function formatDate(date) {
 
 function bodyToHtml(body, config) {
   const builder = imageUrlBuilder(config)
-  return toHTML(body, {
-    components: {
-      types: {
-        image: ({value}) =>
-          `<img src="${builder.image(value).width(1200).fit('max').url()}" alt="${escapeHtml(value.alt || '')}" />`,
-        videoEmbed: ({value}) => videoEmbedToHtml(value.url || ''),
-      },
+  const components = {
+    types: {
+      image: ({value}) =>
+        `<img src="${builder.image(value).width(1200).fit('max').url()}" alt="${escapeHtml(value.alt || '')}" />`,
+      videoEmbed: ({value}) => videoEmbedToHtml(value.url || ''),
     },
-  })
+  }
+
+  // toHTML() concatenates top-level blocks with no separator, so a body with
+  // more than one block (e.g. an image followed by paragraphs) renders as a
+  // single line of HTML. Kramdown only recognizes block-level HTML (<p>,
+  // <iframe>, etc.) when it starts its own line surrounded by blank lines —
+  // otherwise it treats the tags as literal text and HTML-escapes them. So
+  // each top-level block/list-run must be rendered separately and joined
+  // with blank lines, while consecutive list items of the same style stay
+  // grouped together so toHTML still wraps them in one <ul>/<ol>.
+  return groupTopLevelBlocks(body)
+    .map((group) => toHTML(group, {components}))
+    .join('\n\n')
+}
+
+function groupTopLevelBlocks(body) {
+  const groups = []
+  for (const item of body) {
+    const previousGroup = groups[groups.length - 1]
+    const isListItem = item._type === 'block' && item.listItem
+    const previousIsSameListRun =
+      isListItem &&
+      previousGroup &&
+      previousGroup.every((b) => b._type === 'block' && b.listItem === item.listItem)
+
+    if (previousIsSameListRun) {
+      previousGroup.push(item)
+    } else {
+      groups.push([item])
+    }
+  }
+  return groups
 }
 
 function videoEmbedToHtml(url) {

@@ -120,6 +120,47 @@ test('throws on a video URL that is neither YouTube nor Vimeo', () => {
   assert.throws(() => postToMarkdown(post, config), /Unrecognized video URL/)
 })
 
+test('separates top-level blocks with blank lines so Kramdown treats each as its own HTML block', () => {
+  // Regression test: @portabletext/to-html joins top-level blocks with no
+  // separator. Without blank lines between them, Kramdown only recognizes
+  // the first block as HTML and escapes the rest (e.g. a real bug where an
+  // <img> followed directly by a <p> rendered the <p> as literal "&lt;p&gt;"
+  // text on the live site).
+  const post = {
+    ...basePost,
+    body: [
+      {_type: 'block', style: 'normal', children: [{_type: 'span', text: 'First paragraph'}]},
+      {_type: 'block', style: 'normal', children: [{_type: 'span', text: 'Second paragraph'}]},
+    ],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /<p>First paragraph<\/p>\n\n<p>Second paragraph<\/p>/)
+})
+
+test('groups consecutive list items of the same style into one list', () => {
+  const post = {
+    ...basePost,
+    body: [
+      {
+        _type: 'block',
+        style: 'normal',
+        listItem: 'bullet',
+        level: 1,
+        children: [{_type: 'span', text: 'One'}],
+      },
+      {
+        _type: 'block',
+        style: 'normal',
+        listItem: 'bullet',
+        level: 1,
+        children: [{_type: 'span', text: 'Two'}],
+      },
+    ],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /<ul>\s*<li>One<\/li>\s*<li>Two<\/li>\s*<\/ul>/)
+})
+
 test('throws when slug is missing', () => {
   const post = {...basePost, slug: undefined}
   assert.throws(() => postToMarkdown(post, config), /missing a slug/)
