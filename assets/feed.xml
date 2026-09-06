@@ -1,0 +1,65 @@
+---
+permalink: /feed.xml
+# Atom feed, reference: https://validator.w3.org/feed/docs/atom.html
+#
+# This overrides the `assets/feed.xml` shipped by jekyll-theme-chirpy. The
+# theme's version publishes out-of-line content (`<content src="..."/>`) with
+# only a 400-character plain-text `<summary>`, which makes RSS-to-email
+# services such as Buttondown send a truncated, link-free excerpt. Here the
+# full post HTML is inlined in `<content type="html">` with every relative
+# URL rewritten to an absolute one.
+---
+{%- assign root = '/' | absolute_url -%}
+{%- capture abs_src %}src="{{ root }}{% endcapture -%}
+{%- capture abs_href %}href="{{ root }}{% endcapture -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>{{ root }}</id>
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | strip_newlines | strip | xml_escape }}</subtitle>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author>
+    <name>{{ site.social.name | xml_escape }}</name>
+    <uri>{{ root }}</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="{{ page.url | absolute_url }}"/>
+  <link rel="alternate" type="text/html" hreflang="{{ site.alt_lang | default: site.lang }}" href="{{ root }}"/>
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <rights>© {{ 'now' | date: '%Y' }} {{ site.social.name | xml_escape }}</rights>
+  <icon>{{ '/assets/img/favicons/favicon.ico' | absolute_url }}</icon>
+{% for post in site.posts limit: 10 %}
+  {%- assign post_absolute_url = post.url | absolute_url -%}
+
+  {%- comment -%}
+    Rewrite root-relative `src`/`href` attributes to absolute URLs so images and
+    links still resolve inside an email client or a feed reader. Scheme-relative
+    URLs (`//host/path`) are parked behind a placeholder first so they are not
+    mistaken for root-relative ones.
+  {%- endcomment -%}
+  {%- assign content = post.content
+    | replace: 'src="//', 'src="%{SCHEME_RELATIVE}'
+    | replace: 'href="//', 'href="%{SCHEME_RELATIVE}'
+    | replace: 'src="/', abs_src
+    | replace: 'href="/', abs_href
+    | replace: 'src="%{SCHEME_RELATIVE}', 'src="//'
+    | replace: 'href="%{SCHEME_RELATIVE}', 'href="//'
+  -%}
+
+  <entry>
+    <title type="text">{{ post.title | xml_escape }}</title>
+    <link href="{{ post_absolute_url }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}"/>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
+    <id>{{ post_absolute_url }}</id>
+    <author>
+      <name>{{ post.author | default: site.social.name | xml_escape }}</name>
+    </author>
+  {%- if post.categories %}
+    {%- for category in post.categories %}
+    <category term="{{ category | xml_escape }}"/>
+    {%- endfor %}
+  {%- endif %}
+    <content type="html" xml:base="{{ post_absolute_url }}">{{ content | xml_escape }}</content>
+  </entry>
+{% endfor %}
+</feed>
