@@ -1,0 +1,51 @@
+<!-- A placeholder to allow defining custom metadata -->
+
+{%- comment -%}
+  Clear the image loading placeholder when an image FAILS.
+
+  Chirpy strips its `shimmer` (and `blur`) loading placeholder from an image's
+  wrapper on the image's `load` event only. A broken image never fires `load` --
+  it fires `error` -- so its wrapper keeps running `animation: shimmer 1.3s
+  infinite` forever. Visually that reads as the page perpetually loading or
+  reloading itself, which is what it was mistaken for.
+
+  This matters here more than upstream: ~2,700 imported posts carry 2002-2011
+  images, many externally hosted and steadily rotting, and tools/test.sh runs
+  html-proofer with --disable-external, so a dead image URL is never caught at
+  build time. Clearing on `error` makes a broken image degrade to a plain broken
+  image instead of an endlessly pulsing block.
+
+  Upstream fix would be an `error` listener alongside the `load` one in the
+  theme's img-loading module; until that exists this hook is the least invasive
+  place to do it, since metadata-hook.html is an empty placeholder the theme
+  provides for exactly this kind of addition.
+{%- endcomment -%}
+<script>
+  (function () {
+    function clearPlaceholder(img) {
+      if (img.parentElement) {
+        img.parentElement.classList.remove('shimmer', 'blur');
+      }
+    }
+
+    function bind() {
+      document.querySelectorAll('article img').forEach(function (img) {
+        // Already finished and produced no pixels: it failed before this ran.
+        // A lazy image that simply hasn't started yet has complete === false,
+        // so this does not fire prematurely on below-the-fold images.
+        if (img.complete && img.naturalWidth === 0) {
+          clearPlaceholder(img);
+        }
+        img.addEventListener('error', function () {
+          clearPlaceholder(img);
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bind);
+    } else {
+      bind();
+    }
+  })();
+</script>

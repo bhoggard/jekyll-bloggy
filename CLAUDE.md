@@ -31,6 +31,7 @@ There are no unit tests; `tools/test.sh` is the whole test suite (it rebuilds `_
 - `_tabs/` — sidebar pages (About, Archives, Categories, Tags), ordered by `order` frontmatter.
 - `_plugins/posts-lastmod-hook.rb` — sets `last_modified_at` on posts from git log; a post's modification date only updates once it has more than one commit touching it.
 - `_data/contact.yml`, `_data/share.yml` — which contact icons and share buttons appear.
+- `_includes/metadata-hook.html` — the theme's empty extension-point placeholder, overridden to clear the image loading placeholder on `error`. See "Stuck image shimmer" below.
 - `_includes/{sidebar,topbar,refactor-content}.html`, `_layouts/{home,post}.html` — **forks of theme files**, copied out of the gem and edited. `tools/theme-overrides.sha256` records the checksum of each one's upstream counterpart; `tools/check-theme-sync.sh` (run by `tools/test.sh`) fails when the gem's copy changes, meaning the fork needs re-reviewing. See "Theme version drift" below.
 - `assets/lib` — git submodule (chirpy-static-assets); run `git submodule update --init` after a fresh clone or the site will be missing JS/CSS assets.
 
@@ -61,6 +62,24 @@ When bumping the theme: bump the `Gemfile`, `bundle update jekyll-theme-chirpy`,
 then run `bash tools/check-theme-sync.sh`. For each file it flags, diff our fork
 against the new upstream, port the changes, and re-record with
 `bash tools/check-theme-sync.sh --update`. Commit the updated `Gemfile.lock`.
+
+## Stuck image shimmer
+
+Chirpy wraps post images in a `.shimmer` placeholder and strips that class on the
+image's `load` event. A **broken** image never fires `load` (it fires `error`), so
+its wrapper keeps running `animation: shimmer 1.3s infinite` indefinitely. On a
+page with several images this reads as the site perpetually loading or reloading
+itself — it was reported, and initially misdiagnosed, as a reload loop. The page
+is not reloading; scroll position stays put, which is how to tell the two apart.
+
+`_includes/metadata-hook.html` clears the placeholder on `error` as well, so a
+dead image degrades to a plain broken image.
+
+This archive is unusually exposed to it: ~2,700 imported posts carry 2002-2011
+images, many externally hosted and steadily rotting, and `tools/test.sh` runs
+html-proofer with `--disable-external`, so a dead external image URL is never
+caught at build time. Enabling external checking would catch the underlying
+rot, at the cost of a much slower and network-flaky test run.
 
 ## Notes
 
