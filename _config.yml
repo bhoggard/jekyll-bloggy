@@ -136,19 +136,9 @@ assets:
     env: # [development | production]
 
 pwa:
-  # Keep `enabled: true`. This gates whether app.min.js is loaded at all, and
-  # that script is what unregisters the service worker (see `cache.enabled`
-  # below) -- turning this off would strand the workers it needs to clean up.
   enabled: true # The option for PWA feature (installable)
   cache:
-    # Deliberately OFF. The theme's service worker is cache-first with no
-    # revalidation, so a browser that cached one theme version's HTML kept
-    # serving it against another version's JavaScript, and the site reloaded
-    # itself in a loop. Blanking this makes app.min.js take its unregister
-    # branch (`register=` is empty) and swconf.js emit `purge: true`, so
-    # visitors' existing workers unregister and drop their caches.
-    # Re-enabling this brings the offline cache -- and that failure mode -- back.
-    enabled: # The option for PWA offline cache
+    enabled: true # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
