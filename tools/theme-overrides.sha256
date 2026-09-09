@@ -1,0 +1,17 @@
+# Upstream checksums for the jekyll-theme-chirpy files this repo vendors.
+#
+# Each entry is the sha256 of the THEME GEM's copy of a file that we override
+# under _includes/ or _layouts/, recorded at the theme version named below.
+# Our local copies are deliberate forks of these, so they can't be compared for
+# equality -- instead we watch upstream. When the gem's copy changes, our fork
+# is stale and needs re-reviewing against the new upstream.
+#
+# Regenerate after intentionally re-syncing a fork:
+#   bash tools/check-theme-sync.sh --update
+#
+# theme-version: 7.6.0
+11161121255196631b9323aa8474e9dca8f81c7d54247cb0d5b99bc3d12625f7  _includes/sidebar.html
+e86914a1fa7c81435a08e1d9c293672c2a288784cb4386a9bc4c187c56dd11d4  _includes/topbar.html
+ccc9fa8ff570a9256ce271550b96c6b92d94d1c254d0b2a16e097e08aa1c5eb7  _includes/refactor-content.html
+766995a87d44f878b8ca541b4768ae713e3ce1afdc2a006cebe1edcd816384eb  _layouts/home.html
+1fb016f23173c41745146a2da460301f44ca49ebbb56aa75b01135c4d2462203  _layouts/post.html

@@ -1,7 +1,12 @@
 # Bundler cache
 .bundle
 vendor
-Gemfile.lock
+
+# NOTE: Gemfile.lock is intentionally COMMITTED. Cloudflare Pages builds the
+# site itself, so an unpinned theme lets the deployed jekyll-theme-chirpy
+# version drift away from the copies of its files vendored under _includes/
+# and _layouts/ -- which has broken the live site more than once. See
+# tools/check-theme-sync.sh.
 
 # Jekyll cache
 .jekyll-cache

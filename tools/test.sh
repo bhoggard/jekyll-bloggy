@@ -54,6 +54,10 @@ main() {
     rm -rf "$SITE_DIR"
   fi
 
+  # fail early if the theme gem moved out from under the copies of its files
+  # vendored in _includes/ and _layouts/
+  bash "$(dirname "$0")/check-theme-sync.sh"
+
   read_baseurl
 
   # fetch Sanity-sourced posts (regenerates _posts/sanity/ so html-proofer
