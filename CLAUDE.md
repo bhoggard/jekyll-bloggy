@@ -44,13 +44,20 @@ The site is hosted on Cloudflare Pages (project `bloggy`, at `bloggy-ell.pages.d
 ## Theme version drift
 
 The theme ships its layouts, includes **and** its compiled JavaScript as one
-unit, and this repo forks five of those files. If the gem version moves while a
-fork stays behind, the markup and the script that drives it can disagree — the
-failure mode is not a build error but a broken page at runtime. This has bitten
-the live site twice, both times surfacing as the site reloading itself in a loop
-(the PWA service-worker update path is wired by ID/selector between
-`_includes/notification.html` and the theme's `app.min.js`, and those moved
-between 7.5.0 and 7.6.0).
+unit, and this repo forks several of those files. If the gem version moves while
+a fork stays behind, the markup and the script that drives it can disagree — the
+failure mode is not a build error but a broken page at runtime, since the two are
+wired together by id and selector. Concretely: between 7.5.0 and 7.6.0 the PWA
+update button moved out of `.toast-body`, and `app.min.js` switched from
+`.toast-body>button` to `[aria-label="Update"]` to match. Commit c154dd5 ("fix
+bug from chirpy theme mismatch") repaired that class of skew by hand.
+
+Do NOT assume drift explains a runtime symptom without confirming it. A later
+report of the site "reloading in a loop" was investigated at length and was **not**
+drift — the deployed HTML and JS were both 7.6.0 and agreed with each other. The
+actual causes were the two image-placeholder issues documented below, and the
+page was never reloading at all. Check the deployed `app.min.js`/`sw.min.js`
+version banners against the served markup before going down this path.
 
 Two guards exist, and both matter:
 
