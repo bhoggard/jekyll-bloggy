@@ -170,3 +170,65 @@ test('throws when publishedAt is missing', () => {
   const post = {...basePost, publishedAt: undefined}
   assert.throws(() => postToMarkdown(post, config), /missing publishedAt/)
 })
+
+test('emits intrinsic width/height on an image so its space is reserved', () => {
+  const post = {
+    ...basePost,
+    body: [
+      {
+        _type: 'image',
+        _key: 'i1',
+        asset: {_type: 'reference', _ref: 'image-abc123-800x600-jpg'},
+      },
+    ],
+  }
+  const {content} = postToMarkdown(post, config)
+  // narrower than MAX_IMAGE_WIDTH, so served at its own size
+  assert.match(content, /width="800" height="600"/)
+})
+
+test('scales width/height down for an image wider than the requested max', () => {
+  const post = {
+    ...basePost,
+    body: [
+      {
+        _type: 'image',
+        _key: 'i1',
+        asset: {_type: 'reference', _ref: 'image-abc123-1122x1402-png'},
+      },
+    ],
+  }
+  const {content} = postToMarkdown(post, config)
+  // 1122 is under the 1200 cap, so it keeps its own dimensions
+  assert.match(content, /width="1122" height="1402"/)
+})
+
+test('scales a very wide image to the max width, preserving aspect ratio', () => {
+  const post = {
+    ...basePost,
+    body: [
+      {
+        _type: 'image',
+        _key: 'i1',
+        asset: {_type: 'reference', _ref: 'image-abc123-2400x1200-jpg'},
+      },
+    ],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /width="1200" height="600"/)
+})
+
+test('reads dimensions from an asset given as _id rather than _ref', () => {
+  const post = {
+    ...basePost,
+    body: [
+      {
+        _type: 'image',
+        _key: 'i1',
+        asset: {_type: 'sanity.imageAsset', _id: 'image-abc123-640x480-jpg'},
+      },
+    ],
+  }
+  const {content} = postToMarkdown(post, config)
+  assert.match(content, /width="640" height="480"/)
+})

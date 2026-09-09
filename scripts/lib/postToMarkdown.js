@@ -36,12 +36,19 @@ function formatDate(date) {
   )
 }
 
+// Widest rendition we request from the Sanity CDN. `fit('max')` caps the width
+// here but never upscales, so a narrower original is served at its own width.
+const MAX_IMAGE_WIDTH = 1200
+
 function bodyToHtml(body, config) {
   const builder = imageUrlBuilder(config)
   const components = {
     types: {
-      image: ({value}) =>
-        `<img src="${builder.image(value).width(1200).fit('max').url()}" alt="${escapeHtml(value.alt || '')}" />`,
+      image: ({value}) => {
+        const src = builder.image(value).width(MAX_IMAGE_WIDTH).fit('max').url()
+        const size = imageSizeAttrs(value)
+        return `<img src="${src}" alt="${escapeHtml(value.alt || '')}"${size} />`
+      },
       videoEmbed: ({value}) => videoEmbedToHtml(value.url || ''),
     },
   }
@@ -76,6 +83,31 @@ function groupTopLevelBlocks(body) {
     }
   }
   return groups
+}
+
+// Emit intrinsic width/height so the browser reserves the right space before the
+// image loads. Without them a tall image dropping in on load shoves everything
+// below it down the page -- with lazy loading and scroll anchoring that reads as
+// the page jumping up and down. Sanity encodes the original dimensions in the
+// asset ref (image-<hash>-<width>x<height>-<ext>), so no extra request is needed.
+// Returns '' when the ref is an unexpected shape. Defensive only: @sanity/image-url
+// itself rejects a ref without dimensions before this is reached.
+function imageSizeAttrs(value) {
+  const ref = (value && value.asset && (value.asset._ref || value.asset._id)) || ''
+  const match = /-(\d+)x(\d+)-[a-zA-Z0-9]+$/.exec(ref)
+  if (!match) {
+    return ''
+  }
+
+  const naturalWidth = Number(match[1])
+  const naturalHeight = Number(match[2])
+  if (!naturalWidth || !naturalHeight) {
+    return ''
+  }
+
+  const width = Math.min(naturalWidth, MAX_IMAGE_WIDTH)
+  const height = Math.round((naturalHeight * width) / naturalWidth)
+  return ` width="${width}" height="${height}"`
 }
 
 function videoEmbedToHtml(url) {

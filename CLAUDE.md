@@ -75,6 +75,15 @@ is not reloading; scroll position stays put, which is how to tell the two apart.
 `_includes/metadata-hook.html` clears the placeholder on `error` as well, so a
 dead image degrades to a plain broken image.
 
+A separate symptom is easily confused with it: the page **jumping up and down**.
+That is layout shift, not the shimmer (which sweeps horizontally, never
+vertically). It happens when an image carries no `width`/`height`, so nothing
+reserves its space and everything below it lurches when it loads. The MT-imported
+posts all carry dimensions; Sanity-sourced ones did not until
+`scripts/lib/postToMarkdown.js` began deriving them from the asset ref
+(`image-<hash>-<width>x<height>-<ext>`). Keep emitting them for any new image
+type added to that renderer.
+
 This archive is unusually exposed to it: ~2,700 imported posts carry 2002-2011
 images, many externally hosted and steadily rotting, and `tools/test.sh` runs
 html-proofer with `--disable-external`, so a dead external image URL is never
