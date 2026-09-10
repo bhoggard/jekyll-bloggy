@@ -1,0 +1,53 @@
+# Local preview overrides -- NEVER used by the Cloudflare Pages build, which
+# runs `jekyll build` against _config.yml alone.
+#
+# Usage:
+#   bundle exec jekyll serve --config _config.yml,_config.dev.yml
+#
+# A full build renders ~8,200 pages and takes ~85s, which makes iterating on
+# CSS or a layout painful. This trades completeness for speed: build the most
+# recent posts only, skip the taxonomy archives, and skip copying the ~7,000
+# static files of legacy redirect stubs and images. Result: ~2s.
+#
+# What you lose locally: older posts, category/tag pages, the legacy redirect
+# stubs, and images served from the archive directories. Drop the flag and do
+# a normal build when you need to check any of those.
+
+# Newest N posts. A post you are currently writing is always among them.
+limit_posts: 40
+
+# One long page instead of ~280 paginated ones.
+paginate: 200
+
+jekyll-archives:
+  enabled: []
+
+# Repeats _config.yml's list, since a key in a later config file replaces it
+# rather than merging, then adds the bulky archive directories.
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - scripts
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+  # Dev-only: legacy redirect stubs and archived images.
+  - mt/
+  - images/
+  - upload/
+  - assets_c/
+  - albums/
+  - "2002/"
+  - "2003/"
+  - "2004/"
+  - "2005/"
+  - "2006/"
+  - "2007/"
+  - "2008/"
+  - "2009/"
+  - "2010/"
+  - "2011/"

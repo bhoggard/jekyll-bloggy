@@ -18,6 +18,7 @@ Ruby 3.4.4 is pinned via `mise.toml` — this matches Cloudflare Pages' default 
 bundle install                    # install dependencies
 bash tools/run.sh                 # dev server with live reload (bundle exec jekyll s -l)
 bash tools/run.sh -p              # serve in production mode
+bash tools/run.sh -f              # serve with the fast local loop (see _config.dev.yml)
 bash tools/test.sh                # test: production build + html-proofer link checking
 bash tools/check-theme-sync.sh    # verify the vendored theme overrides match the gem
 ```
@@ -26,6 +27,7 @@ There are no unit tests; `tools/test.sh` is the whole test suite (it rebuilds `_
 
 ## Structure
 
+- `_config.dev.yml` — local-preview overrides layered on top of `_config.yml` (via `tools/run.sh -f`). A full build renders ~8,200 pages in ~85s, which makes iterating on CSS painful; this builds the newest 40 posts, skips the taxonomy archives, and skips copying the ~7,000 legacy redirect stubs and archived images, for ~1s builds. Cloudflare never sees it — it builds from `_config.yml` alone.
 - `_config.yml` — all site configuration (title, author, social links, analytics, comments, PWA). Most customization happens here rather than in code.
 - `_posts/` — blog posts, named `YYYY-MM-DD-title.md`. Chirpy frontmatter conventions apply (`categories`, `tags`, etc.).
 - `_tabs/` — sidebar pages (About, Archives, Categories, Tags), ordered by `order` frontmatter.

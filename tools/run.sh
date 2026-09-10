@@ -3,6 +3,7 @@
 # Run jekyll serve and then launch the site
 
 prod=false
+fast=false
 command="bundle exec jekyll s -l"
 host="127.0.0.1"
 
@@ -14,6 +15,9 @@ help() {
   echo "Options:"
   echo "     -H, --host [HOST]    Host to bind to."
   echo "     -p, --production     Run Jekyll in 'production' mode."
+  echo "     -f, --fast           Fast local loop: newest posts only, no"
+  echo "                          archives, skip legacy stubs/images (~1s"
+  echo "                          rebuilds instead of ~85s). See _config.dev.yml."
   echo "     -h, --help           Print this help information."
 }
 
@@ -26,6 +30,10 @@ while (($#)); do
     ;;
   -p | --production)
     prod=true
+    shift
+    ;;
+  -f | --fast)
+    fast=true
     shift
     ;;
   -h | --help)
@@ -41,6 +49,10 @@ while (($#)); do
 done
 
 command="$command -H $host"
+
+if $fast; then
+  command="$command --config _config.yml,_config.dev.yml"
+fi
 
 if $prod; then
   command="JEKYLL_ENV=production $command"
